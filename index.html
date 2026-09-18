@@ -188,6 +188,8 @@
       <li><a href="#mi" class="active">Miyokard Enfarktüsü (MI)</a></li>
       <li><a href="#af">Atriyal Fibrilasyon (AF / RVR)</a></li>
       <li><a href="#anafilaksi">Anafilaksi (Erişkin & Pediatrik)</a></li>
+      <li><a href="#vt">Ventriküler Taşikardi (Nabızlı VT)</a></li>
+<li><a href="#cpr">Kardiyak Arrest & CPR (VF / Asistoli)</a></li>
     </ul>
   </aside>
 
@@ -403,6 +405,158 @@
         </ul>
       </div>
     </div>
+    <!-- 1. NABIZLI VT KARTI -->
+    <div id="vt" class="card">
+      <div class="card-head">
+        <div>
+          <h2>VENTRİKÜLER TAŞİKARDİ (Nabızlı Geniş QRS)</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Stabil / Anstabil Geniş Kompleksli Taşikardi Algoritması</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
+
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (FARMAKOLOJİ & KARDİYOVERSİYON)</h3>
+        
+        <div class="subhead" style="color: var(--red-text);">1. Anstabil Hasta (Hipotansiyon, Bilinç Kaybı, Göğüs Ağrısı, Akut AC Ödemi):</div>
+        <p style="font-size: 0.85rem; color: #991b1b; font-weight: 700; margin-bottom: 6px;">
+          ⚠️ İLAÇLA OYALANMA! Acil Senkronize Elektriksel Kardiyoversiyon!
+        </p>
+        <ol>
+          <li>
+            <strong>Sedoanaljezi (Hasta bilinçliyse):</strong> Midazolam (Dormicum) 2 - 2.5 mg IV + Fentanil 50 mcg IV (Hızlıca uygula, arrest eşiğindeki hastada sedasyon için zaman kaybetme).
+          </li>
+          <li>
+            <strong>Senkronize Kardiyoversiyon:</strong> Defibrilatörde <strong>SYNC</strong> modunu mutlaka aç (R dalgaları işaretlenmeli!). 
+            <br>Enerji: Bifazik <strong>100 J</strong> ile başla &rarr; Ritim dönmezse <strong>150 J &rarr; 200 J</strong> basamaklı artır.
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Hemodinamik Olarak Stabil Hasta (Tansiyon Normal, Semptom Hafif):</div>
+        <ol start="3">
+          <li>
+            <strong>Amiodaron (Cordarone 150 mg amp):</strong> 1 ampul (150 mg), <strong>100 cc %5 Dekstroz içinde 10 dakikada</strong> IV infüzyonla verilir. <em>(SF ile çökelebilir, mutlaka %5 Dekstroz kullan!).</em>
+          </li>
+          <li>
+            <strong>Dirençli / Tekrarlayan Atak:</strong> 10-15 dk sonra 150 mg IV ek yükleme tekrarlanabilir.
+          </li>
+          <li>
+            <strong>İdame İnfüzyonu:</strong> Ritim sinüse döndükten sonra ilk 6 saat 1 mg/dk (yaklaşık 360 mg), sonraki 18 saat 0.5 mg/dk infüzyon.
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #854d0e; margin-top: 12px;">⚠️ KIRMIZI ÇİZGİLER (HAYATİ UYARI):</div>
+        <ul style="color: #854d0e; font-size: 0.85rem;">
+          <li><strong>SYNC Açmayı Unutma:</strong> Sync açılmazsa şok T dalgası üstüne düşer (R-on-T) ve ritim anında VF'ye (Arrest) döner!</li>
+          <li><strong>Kalsiyum Blokeri Verme:</strong> Geniş QRS taşikardide aksi kanıtlanana kadar tanı VT'dir; asla Diltizem / Verapamil yapma (ani kardiyak kollapsa sokar).</li>
+        </ul>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: KLİNİK YÖNETİM</h3>
+        <p><strong>1. Polimorfik VT & Torsades de Pointes Tuzağı:</strong></p>
+        <ul>
+          <li>QRS morfolojisi sürekli değişiyorsa (burgu gibi) ve QT uzunsa <strong>Amiodaron KONTRENDİKEDİR!</strong> (QT'yi uzatır). Tedavi: <strong>Magnezyum Sülfat 2 g IV</strong> (10-15 dk infüzyon) + Asenkronize defibrilasyon.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>2. Sevk & Konsültasyon (112 KKM):</strong></p>
+        <ul>
+          <li>Ritim dönse dahi VT atağı geçiren hasta potansiyel AKS/MI veya malign kardiyomiyopati adayıdır. Monitörize, damar yolu açık ve defibrilatör refakatinde 112 KKM ile doğrudan <strong>Koroner Yoğun Bakım / Anjiyo (PKI)</strong> merkezine sevk edilmelidir.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- 2. KARDIYAK ARREST & CPR KARTI -->
+    <div id="cpr" class="card">
+      <div class="card-head">
+        <div>
+          <h2>KARDİYAK ARREST & CPR ALGORİTMASI (ACLS)</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">VF / Nabızsız VT (Şoklanabilir) & Asistoli / PEA Protokolü</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
+
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (RESÜSİTASYON & FARMAKOLOJİ)</h3>
+        
+        <div class="subhead" style="color: var(--red-text);">1. Temel Döngü (30:2 & Kesintisiz Kompresyon):</div>
+        <ol>
+          <li><strong>Göğüs Kompresyonu:</strong> Hız: 100-120/dk, derinlik: 5-6 cm. Göğsün tam geri gevşemesine izin ver. Her 2 dakikada bir basıcıyı değiştir.</li>
+          <li><strong>Solunum:</strong> İleri havayolu yoksa 30 kompresyon : 2 solunum. İleri havayolu (entübe) takıldıysa göğüs basısını hiç durdurmadan 6 saniyede 1 soluk (10 soluk/dk).</li>
+        </ol>
+
+        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. ŞOKLANABİLİR RİTİM (VF / NABIZSIZ VT):</div>
+        <ol start="3">
+          <li>
+            <strong>1. ŞOK:</strong> Hemen <strong>Bifazik 200 J (Monofazik 360 J)</strong> şok ver. Çocukta: <strong>2 J/kg</strong>. 
+            <br><em>⚠️ ŞOKTAN HEMEN SONRA NABIZ BAKMA! 2 dakika kesintisiz CPR'a başla.</em>
+          </li>
+          <li>
+            <strong>2. ŞOK:</strong> 2 dk sonra ritim halen VF/pVT ise tekrar <strong>200 J</strong> şok ver (Çocukta: <strong>4 J/kg</strong>). 
+            <br>&rarr; CPR'a devam ederken <strong>ADRENALİN 1 mg IV puşe</strong> yap (Peşine 10-20 cc SF bolusla yıka ve kolu kaldır).
+          </li>
+          <li>
+            <strong>3. ŞOK & AMİODARON:</strong> Dirençli VF/pVT sürüyorsa 3. şok (200 J) &rarr; CPR sürerken:
+            <br><strong>Amiodaron 300 mg IV puşe</strong> (20 cc %5 Dekstroz içinde bolus). 
+            <br><em>(Amiodaron yoksa alternatif: Lidokain 1-1.5 mg/kg IV - ortalama 100 mg). İkisini karıştırma!</em>
+          </li>
+          <li>
+            <strong>5. ŞOK & İKİNCİ DOZ:</strong> VF devam ediyorsa 5. şok sonrası <strong>Amiodaron 150 mg IV puşe</strong> yapılır (Lidokain seçildiyse yarım doz: 50 mg).
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #374151; margin-top: 12px;">3. ŞOKLANAMAZ RİTİM (ASİSTOLİ / PEA):</div>
+        <ul style="font-size: 0.85rem;">
+          <li><strong>ŞOK KESİNLİKLE YOKTUR!</strong></li>
+          <li>Damar yolu açılır açılmaz <strong>hemen Adrenalin 1 mg IV</strong> yapılır.</li>
+          <li>2 dakikalık CPR periyotlarıyla devam edilir; her 3-5 dakikada bir 1 mg Adrenalin IV tekrarlanır.</li>
+        </ul>
+
+        <div class="subhead" style="color: #854d0e; margin-top: 12px;">İlaç Uygulama Kuralları:</div>
+        <ul style="color: #854d0e; font-size: 0.85rem;">
+          <li><strong>Adrenalin Periyodu:</strong> Arrest boyunca her <strong>3-5 dakikada bir 1 mg IV</strong> (Çocukta: 0.01 mg/kg = 0.01 ml/kg 1:1000). Her IV ilaçtan sonra mutlaka 10-20 cc SF bolus yap.</li>
+          <li><strong>Damar Yolu Açılamazsa:</strong> Vakit kaybetmeden <strong>Kemik İçi (İntraosseöz / IO)</strong> yol aç. IO yoksa son çare endotrakeal tüpten IV dozun 2-2.5 katı sulandırılarak verilebilir.</li>
+        </ul>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: KLİNİK YÖNETİM (4H - 4T KONTROLÜ)</h3>
+        <p>CPR sürerken arrestin geri döndürülebilir nedenlerini (4H - 4T) tek tek tara ve tedavi et:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.85rem; margin-top: 6px;">
+          <div>
+            <strong>4 H:</strong>
+            <ul style="margin: 4px 0; padding-left: 18px;">
+              <li><strong>Hipovolemi:</strong> Hızlı kristaloid SF bolus.</li>
+              <li><strong>Hipoksi:</strong> %100 O₂ ve ileri havayolu.</li>
+              <li><strong>Hipo/Hiperkalemi & Asidoz:</strong> K+ & pH kontrolü, gerekirse NaHCO₃ / Kalsiyum.</li>
+              <li><strong>Hipotermi:</strong> Aktif ısıtma.</li>
+            </ul>
+          </div>
+          <div>
+            <strong>4 T:</strong>
+            <ul style="margin: 4px 0; padding-left: 18px;">
+              <li><strong>Tansiyon Pnömotoraks:</strong> İğne dekompresyonu / Göğüs tüpü.</li>
+              <li><strong>Tamponad (Kardiyak):</strong> Perikardiyosentez.</li>
+              <li><strong>Toksinler / Zehirlenme:</strong> Uygun antidot.</li>
+              <li><strong>Tromboz (Pulmoner / Koroner):</strong> Masif PE şüphesinde KPR sırasında Trombolitik (Alteplaz).</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top: 10px;"><strong>ROSC (Spontan Dolaşımın Geri Dönüşü):</strong></p>
+        <ul>
+          <li>Nabız ve spontan ritim döndüğünde kompresyonu durdur; hedef SpO₂: %94-98, hedef Sistolik KB &gt; 100 mmHg tutulmalıdır.</li>
+          <li>Derhal 12 derivasyonlu EKG çek (STEMI var mı?), 112 KKM ile acil <strong>Yoğun Bakım ve Primer PKI (Anjiyo)</strong> nakli sağla.</li>
+        </ul>
+      </div>
+    </div>
+    
     <!-- HUKUKİ ZIRH METNİ -->
     <footer class="disclaimer-box">
       <strong>Yasal Uyarı & Sorumluluk Reddi:</strong><br>

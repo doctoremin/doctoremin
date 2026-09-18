@@ -186,9 +186,7 @@
     <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-sub); text-transform: uppercase;">Tanı Listesi</div>
     <ul class="protocol-nav" id="protocolList">
       <li><a href="#mi" class="active">Miyokard Enfarktüsü (MI)</a></li>
-      <li><a href="#renal-kolik" style="opacity: 0.5;">Renal Kolik (Yakında)</a></li>
-      <li><a href="#skabies" style="opacity: 0.5;">Skabies (Yakında)</a></li>
-      <li><a href="#anafilaksi" style="opacity: 0.5;">Anafilaksi (Yakında)</a></li>
+      <li><a href="#af">Atriyal Fibrilasyon (AF / RVR)</a></li>
     </ul>
   </aside>
 
@@ -242,7 +240,75 @@
         </ul>
       </div>
     </div>
+<!-- ATRIAL FIBRILASYON (AF) KARTI -->
+    <div id="af" class="card">
+      <div class="card-head">
+        <div>
+          <h2>ATRİYAL FİBRİLASYON (Hızlı Yanıtlı AF / RVR)</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Acil Hız Kırma & Güvenli Saha Algoritması</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
 
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (FARMAKOLOJİ & HIZ KONTROLÜ)</h3>
+        <p style="font-size: 0.85rem; color: #991b1b; font-weight: 700; margin-bottom: 8px;">
+          ⚠️ ŞART: Hasta stabil mi? (Hipotansiyon, bilinç bulanıklığı, akut AC ödemi, iskemik göğüs ağrısı varsa &rarr; İlaçla oyalanma, Sedasyon + Senkronize Kardiyoversiyon!).
+        </p>
+
+        <div class="subhead" style="color: var(--red-text);">1. Hız Kırma (Hastaya Göre BİRİNİ Seç):</div>
+        <ol>
+          <li>
+            <strong>Diltiazem (Diltizem 25 mg amp) — [KOAH / Astımda İlk Tercih]:</strong><br>
+            1 ampulü 10 cc SF ile sulandır. Monitörde tansiyon izlenerek önce <strong>3 cc (7.5 mg) yavaş IV</strong> puşe yap. 10-15 dk sonra yanıt yoksa <strong>3-4 cc daha</strong> ekle. 
+            <br><span style="color: #b91c1c; font-weight: 600;">(Sistolik Tansiyon &lt; 100 mmHg veya EF &lt; %40 ise KONTRENDİKE!)</span>
+          </li>
+          <li>
+            <em>VEYA</em> <strong>Metoprolol (Beloc 5 mg amp) — [Genç / Hipertansif Hastada]:</strong><br>
+            Tansiyon normalse <strong>2.5 - 5 mg (yarım veya 1 amp) yavaş IV</strong> puşe (2 dakikada).
+            <br><span style="color: #b91c1c; font-weight: 600;">(DİKKAT: Aktif KOAH / Astım alevlenmesinde verme, bronkospazm tetikler!)</span>
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Dirençli Olguda / Kalp Yetersizliğinde:</div>
+        <ol start="3">
+          <li>
+            <strong>Digoksin (0.5 mg amp):</strong> Tansiyonu sınırda veya EF'si düşük kalp yetmezliği hastasında 1 ampul 100 cc SF içinde 30-60 dakikada yavaş infüzyon verilir. <em>(Acil puşede etkisi hemen çıkmaz, 1-2 saat sonra başlar).</em>
+          </li>
+          <li>
+            <strong>Aspirin Durumu:</strong> Saf AF'de inme koruması için rutin aspirin verilmez (kılavuz dışıdır). Yalnızca eşlik eden akut koroner sendrom (AKS) / iskemik göğüs ağrısı şüphesi varsa 300 mg çiğnetilir.
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #854d0e; margin-top: 12px;">⚠️ KIRMIZI ÇİZGİLER (ÖLÜMCÜL TUZAKLAR):</div>
+        <ul style="color: #854d0e; font-size: 0.85rem;">
+          <li><strong>Diltizem + Beloc'u Ardışık Yapma:</strong> Diltizem yaptın diye hız düşmediğinde peşine hemen IV Beloc yapma! AV tam blok, derin bradikardi ve asistoliye (arrest) sokabilirsin.</li>
+          <li><strong>Adenozin AF İlacı Değildir:</strong> AF'yi sonlandırmaz; gizli iletim yolu (WPW) varsa elektriği aksesuar yola kaçırıp ritmi anında VF'ye (ventriküler fibrilasyon) sokabilir.</li>
+        </ul>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: KLİNİK YÖNETİM</h3>
+        <p><strong>1. Tetikleyiciyi Ara (Sekonder AF):</strong></p>
+        <ul>
+          <li>Ateş / sepsis, ağır dehidratasyon, hipertiroidi (tiroid fırtınası), pulmoner emboli veya alkol alımı ("holiday heart") AF'yi tetiklemiş olabilir; alttaki primer nedeni atlama.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>2. 48 Saat Kuralı & Emboli Tuzağı (Çok Önemli):</strong></p>
+        <ul>
+          <li>Başlangıcı <strong>&gt; 48 saat</strong> veya <strong>belirsiz</strong> olan AF'yi ilaçla ya da şokla normal sinüs ritmine döndürmeye ÇALIŞMA!</li>
+          <li>Kulakçıkta trombüs oluşmuş olabilir; ritim aniden sinüse dönerse pıhtıyı beyne atıp hastada <strong>inme (felç)</strong> yapabilirsin. Hedef sadece ventrikül hızını kırmaktır (Hedef istirahatte nabız &lt; 110/dk).</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>3. Taburculuk & Sevk:</strong></p>
+        <ul>
+          <li>Hızı &lt; 110/dk'ya inen, semptomu gerileyen ve hemodinamisi stabil olan hasta oral hız kırıcı ve antikoagülan planı için <strong>Kardiyoloji Polikliniği</strong> kontrolü önerilerek taburcu edilebilir.</li>
+          <li>Hız kırılamıyorsa, hipotansiyon derinleşiyorsa veya göğüs ağrısı/troponin yüksekliği varsa 112 KKM üzerinden acil sevk planlanır.</li>
+        </ul>
+      </div>
+    </div>
     <!-- HUKUKİ ZIRH METNİ -->
     <footer class="disclaimer-box">
       <strong>Yasal Uyarı & Sorumluluk Reddi:</strong><br>

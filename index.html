@@ -190,6 +190,7 @@
       <li><a href="#anafilaksi">Anafilaksi (Erişkin & Pediatrik)</a></li>
       <li><a href="#vt">Ventriküler Taşikardi (Nabızlı VT)</a></li>
 <li><a href="#cpr">Kardiyak Arrest & CPR (VF / Asistoli)</a></li>
+      <li><a href="#svt">Supraventriküler Taşikardi (SVT)</a></li>
     </ul>
   </aside>
 
@@ -556,7 +557,82 @@
         </ul>
       </div>
     </div>
-    
+    <!-- SUPRAVENTRİKÜLER TAŞİKARDİ (SVT) KARTI -->
+    <div id="svt" class="card">
+      <div class="card-head">
+        <div>
+          <h2>SUPRAVENTRİKÜLER TAŞİKARDİ (SVT / PSVT)</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Dar QRS Düzenli Taşikardi & Hızlı Adenozin Protokolü</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
+
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (FARMAKOLOJİ & KARDİYOVERSİYON)</h3>
+        
+        <div class="subhead" style="color: var(--red-text);">1. Anstabil Hasta (Hipotansiyon, Şuur Bulanıklığı, Akut AC Ödemi, İskemi):</div>
+        <p style="font-size: 0.85rem; color: #991b1b; font-weight: 700; margin-bottom: 6px;">
+          ⚠️ İLAÇLA VAKİT KAYBETME! Acil Senkronize Elektriksel Kardiyoversiyon!
+        </p>
+        <ol>
+          <li>
+            <strong>Sedoanaljezi (Zaman Varsa):</strong> Midazolam (Dormicum) 2 - 2.5 mg IV + Fentanil 50 mcg IV (Arrest eşiğindeki hastada sedasyon için gecikme).
+          </li>
+          <li>
+            <strong>Senkronize Kardiyoversiyon:</strong> Defibrilatörde <strong>SYNC</strong> modunu aç (R dalgaları işaretlenmeli!). 
+            <br>Enerji: Bifazik <strong>50 - 100 J</strong> ile başla &rarr; Ritim dönmezse <strong>150 J &rarr; 200 J</strong> basamaklı artır.
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Hemodinamik Olarak Stabil Hasta:</div>
+        <ol start="3">
+          <li>
+            <strong>Modifiye Valsalva (REVERT Tekniği):</strong> Hasta yarı oturur pozisyonda 10 cc'lik enjektöre 15 sn sertçe üfler; süre bitince anında sırtüstü yatırılıp bacakları 45° yukarı kaldırılır (45 sn tutulur). Başarı oranı %40 üzerindedir. <em>(İleri yaş / inme öyküsünde karotis masajı yapma!).</em>
+          </li>
+          <li>
+            <strong>Adenozin (Yarı Ömrü &lt; 10 Saniye! Hızlı Puşe + Flush):</strong>
+            <br><em>⚠️ Hastayı önceden uyar: "Birkaç saniye göğsünde sıkışma, yanma ve fenalık hissi olacak, hemen geçecek."</em>
+            <ul>
+              <li><strong>1. Doz:</strong> <strong>6 mg hızlı IV puşe</strong> (Geniş antekübital yoldan) &rarr; Anında peşine <strong>20 cc SF flush</strong> ve kolu havaya kaldır.</li>
+              <li><strong>2. Doz (1-2 dk sonra dönmezse):</strong> <strong>12 mg hızlı IV puşe</strong> &rarr; Anında 20 cc SF flush ve kolu kaldır.</li>
+              <li><strong>3. Doz (Gerekirse):</strong> Yanıt yoksa son kez <strong>12 mg (veya 18 mg)</strong> tekrarlanabilir.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>İkinci Sıra (Adenozine Dirençli veya Astımlı Hasta):</strong>
+            <br>&bull; <strong>Diltiazem (Diltizem):</strong> 0.25 mg/kg (yaklaşık 15-20 mg) 2 dakikada yavaş IV puşe.
+            <br>&bull; <em>VEYA</em> <strong>Metoprolol (Beloc):</strong> 2.5 - 5 mg yavaş IV puşe (Astım / KOAH'ta verme!).
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #854d0e; margin-top: 12px;">⚠️ KIRMIZI ÇİZGİLER (HAYATİ UYARI):</div>
+        <ul style="color: #854d0e; font-size: 0.85rem;">
+          <li><strong>Yavaş Puşe Etme:</strong> Adenozin kanda saniyeler içinde parçalanır; yavaş verilirse kalbe ulaşmadan etkisiz kalır.</li>
+          <li><strong>2. ve 3. Derece Blok:</strong> Yüksek dereceli AV bloklarda ve hasta sinüs sendromunda KONTRENDİKEDİR.</li>
+        </ul>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: KLİNİK YÖNETİM</h3>
+        <p><strong>1. Gebelik & Laktasyon:</strong></p>
+        <ul>
+          <li>Adenozin plasentayı geçmez ve kanda saniyeler içinde metabolize olur; gebelerde stabil dar QRS taşikardide <strong>en güvenli birinci basamak ilaçtır</strong>.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>2. Astım & KOAH Tuzağı:</strong></p>
+        <ul>
+          <li>Adenozin bronkokonstriksiyonu tetikleyebilir. Aktif astımı veya ağır KOAH öyküsü olan olgularda adenozin yerine <strong>Diltiazem</strong> tercih edilmelidir.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>3. KÖTÜLEŞİRSE: 112 KKM & Kardiyoloji Sevki:</strong></p>
+        <ul>
+          <li>Tekrarlayan adenozin ve kalsiyum blokörüne rağmen hız kırılamıyorsa veya hipotansiyon derinleşirse anstabil kabul edilip senkronize kardiyoversiyon yapılır.</li>
+          <li>Ritim dönse dahi sık tekrarlayan SVT atakları olan olgular elektrofizyolojik çalışma (EPS / Ablasyon) değerlendirmesi için <strong>Kardiyoloji Polikliniği</strong>ne yönlendirilmeli; hemodinamisi sınırda olanlar 112 KKM ile sevk edilmelidir.</li>
+        </ul>
+      </div>
+    </div>
     <!-- HUKUKİ ZIRH METNİ -->
     <footer class="disclaimer-box">
       <strong>Yasal Uyarı & Sorumluluk Reddi:</strong><br>

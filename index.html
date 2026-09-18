@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Emin | Acil & Klinik Protokoller</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-sub: #64748b;
+      --accent: #0284c7;
+      --red-soft: #fef2f2;
+      --red-border: #ef4444;
+      --red-text: #991b1b;
+      --green-soft: #f0fdf4;
+      --green-border: #22c55e;
+      --green-text: #166534;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.5; }
+
+    .layout { display: flex; min-height: 100vh; }
+
+    /* SOL MENÜ (SIDEBAR) */
+    aside {
+      width: 280px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 20px 16px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .brand { font-size: 1.2rem; font-weight: 800; color: var(--accent); text-decoration: none; }
+    .brand span { color: var(--text); }
+
+    .btn-cv {
+      width: 100%;
+      background: #f1f5f9;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+    }
+    .btn-cv:hover { background: #e2e8f0; }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .search-input:focus { border-color: var(--accent); }
+
+    .protocol-nav { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .protocol-nav a {
+      text-decoration: none;
+      color: var(--text-sub);
+      font-size: 0.9rem;
+      padding: 8px 10px;
+      border-radius: 6px;
+      display: block;
+      font-weight: 500;
+    }
+    .protocol-nav a:hover, .protocol-nav a.active { background: #e0f2fe; color: var(--accent); font-weight: 600; }
+
+    /* SAĞ ANA İÇERİK */
+    main { flex: 1; padding: 32px 40px; max-width: 900px; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .card-head h2 { font-size: 1.25rem; font-weight: 800; }
+    .btn-print {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .box-emin {
+      background: var(--red-soft);
+      border-left: 4px solid var(--red-border);
+      border-radius: 0 8px 8px 0;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .box-emin h3 { font-size: 1rem; font-weight: 800; color: var(--red-text); margin-bottom: 8px; }
+
+    .box-degilsen {
+      background: var(--green-soft);
+      border-left: 4px solid var(--green-border);
+      border-radius: 0 8px 8px 0;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .box-degilsen h3 { font-size: 1rem; font-weight: 800; color: var(--green-text); margin-bottom: 8px; }
+
+    .subhead { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin: 10px 0 4px 0; }
+    ol, ul { padding-left: 18px; font-size: 0.9rem; }
+    li { margin-bottom: 4px; }
+
+    /* YASAL METİN */
+    .disclaimer-box {
+      border: 1px dashed var(--border);
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    /* CV MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.5);
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    .modal-content {
+      background: #fff;
+      max-width: 500px;
+      padding: 24px;
+      border-radius: 12px;
+      max-height: 80vh;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; color: var(--text); }
+    .close-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; }
+
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
+      aside { width: 100%; height: auto; position: static; }
+      main { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="layout">
+  <!-- SOL LİSTE & CV BUTONU -->
+  <aside>
+    <a href="#" class="brand">DOCTOR<span>EMİN</span></a>
+    
+    <button class="btn-cv" onclick="toggleModal(true)">👤 Dr. Emin Dalseçkin (CV)</button>
+    
+    <input type="text" class="search-input" id="sidebarSearch" placeholder="Tanı / ilaç ara..." onkeyup="filterMenu()">
+    
+    <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-sub); text-transform: uppercase;">Tanı Listesi</div>
+    <ul class="protocol-nav" id="protocolList">
+      <li><a href="#mi" class="active">Miyokard Enfarktüsü (MI)</a></li>
+      <li><a href="#renal-kolik" style="opacity: 0.5;">Renal Kolik (Yakında)</a></li>
+      <li><a href="#skabies" style="opacity: 0.5;">Skabies (Yakında)</a></li>
+      <li><a href="#anafilaksi" style="opacity: 0.5;">Anafilaksi (Yakında)</a></li>
+    </ul>
+  </aside>
+
+  <!-- SAĞ PROTOKOLLER -->
+  <main>
+    <div id="mi" class="card">
+      <div class="card-head">
+        <div>
+          <h2>MİYOKARD ENFARKTÜSÜ (MI / AKS)</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Acil Saha ve Sevk Algoritması</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
+
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (FARMAKOLOJİ)</h3>
+        <div class="subhead" style="color: var(--red-text);">Sorgusuz Sualsiz Hemen Kendin Yap (ŞART):</div>
+        <ol>
+          <li><strong>Aspirin (Coraspin):</strong> 300 mg çiğnet (veya 150 mg IV).</li>
+          <li><strong>Klopidogrel (Plavix):</strong> 600 mg yuttur <em>VEYA</em> <strong>Tikagrelor (Brilinta):</strong> 180 mg yuttur.</li>
+        </ol>
+
+        <div class="subhead" style="color: #854d0e; margin-top: 10px;">Kardiyocu "Yap" Derse Yapılacaklar (Onay İste):</div>
+        <ol start="3">
+          <li><strong>Enoxaparin (Clexane):</strong> 0.5 mg/kg IV bolus <em>VEYA</em> <strong>Heparin:</strong> ~5000 Ü IV.</li>
+          <li><strong>İsordil 5 mg Dilaltı:</strong> Tansiyon &lt; 110 mmHg değilse ver. 10 dk'da bir tekrarlanabilir (Max 9 tb). <br><strong style="color:red;">(II, III, aVF inferior MI'da tansiyonu çakıp arrest edebilir, sormadan verme!)</strong></li>
+          <li><strong>Nitrogliserin İnfüzyon:</strong> 100 cc SF + 10 mg nitrogliserin, 6 cc/h başla.</li>
+          <li><strong>Oksijen (O₂):</strong> Hastaya başla.</li>
+        </ol>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: KLİNİK YÖNETİM</h3>
+        <p><strong>1. Klinik Şüphe & EKG:</strong></p>
+        <ul>
+          <li><strong>Tipik Ağrı:</strong> Göğüste baskı, fil oturmuş hissi, sırta/çeneye yayılım, soğuk terleme.</li>
+          <li><strong>Derivasyonlar:</strong> İnferior (II, III, aVF) | Lateral (I, aVL, V5, V6) | Anterior (V1, V2, V3, V4)</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>2. EKG Uyumsuz & Troponin Negatifse:</strong></p>
+        <ul>
+          <li><strong>Antasit Testi:</strong> Çiğnet/içir. Ağrı geçerse gözlemle; geçmezse USAP? kabul et, taburcu etme.</li>
+          <li><strong>Resmi Hat:</strong> Şahsi cepten arama! 112 KKM üzerinden Kardiyoloji İcapçısı ile görüş veya HBYS'den resmi konsültasyon gir.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>3. EKG / Troponin Pozitifse (STEMI / NSTEMI):</strong></p>
+        <ul>
+          <li>İlk 2 şart ilacı verip 112 KKM üzerinden sevk başlat; 3, 4, 5 ve 6. maddeler için kardiyolog onayı iste.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HUKUKİ ZIRH METNİ -->
+    <footer class="disclaimer-box">
+      <strong>Yasal Uyarı & Sorumluluk Reddi:</strong><br>
+      Bu sitede yer alan protokoller, dozlar ve klinik algoritmalar yalnızca hekimler, asistanlar ve sağlık çalışanları için mesleki hafıza desteği amacıyla derlenmiştir. Tıbbi bilgi, kılavuzlar ve farmakolojik parametreler sürekli güncellenmektedir; platformdaki hiçbir içerik güncellik veya mutlak doğruluk garantisi taşımaz. Nihai tanı, reçeteleme ve tedavi sorumluluğu tamamen hastayı bizzat değerlendiren hekime aittir. Buradaki içerikler doğrudan klinik karar yerine geçemez; doğabilecek tıbbi veya hukuki sonuçlardan site yöneticisi sorumlu tutulamaz.
+    </footer>
+  </main>
+</div>
+
+<!-- CV MODAL PENCERESİ -->
+<div class="modal-overlay" id="cvModal" onclick="toggleModal(false)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h3 style="color: var(--text);">Dr. Emin Dalseçkin</h3>
+      <button class="close-btn" onclick="toggleModal(false)">&times;</button>
+    </div>
+    <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Radyoloji Asistan Hekimi</p>
+    <p style="margin-bottom: 10px;">İstanbul Üniversitesi İstanbul Tıp Fakültesi'nden (Çapa) 2023 yılında Dekanlık Sosyal Sorumluluk Özel Ödülü ile mezun oldum. Eş zamanlı olarak İstanbul Üniversitesi Sosyoloji (Lisans) ve Biruni Üniversitesi Elektronörofizyoloji (Önlisans) programlarını bitirdim; 24 yaşımda 3 üniversite derecesi tamamladım.</p>
+    <p style="margin-bottom: 10px;">BM ve AB gençlik projelerinde, Bilim Elçileri Zirvesi heyetinde ve STK'larda görev aldım. Özel sektör danışmanlığı sonrası Van'ın ilçe acillerinde ve aile hekimliğinde mecburi hizmetimi tamamladım. 2025 yılından bu yana Başakşehir Çam ve Sakura Şehir Hastanesi'nde Radyoloji ihtisasıma devam etmekteyim.</p>
+    <p style="font-size: 0.8rem; border-top: 1px solid var(--border); padding-top: 10px;">Sitedeki tüm rehberler meslektaşlarım için tamamen ücretsizdir.</p>
+  </div>
+</div>
+
+<script>
+  function toggleModal(show) {
+    document.getElementById('cvModal').style.display = show ? 'flex' : 'none';
+  }
+
+  function filterMenu() {
+    const q = document.getElementById('sidebarSearch').value.toLowerCase();
+    const items = document.querySelectorAll('#protocolList li');
+    items.forEach(li => {
+      li.style.display = li.innerText.toLowerCase().includes(q) ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

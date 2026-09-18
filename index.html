@@ -187,6 +187,7 @@
     <ul class="protocol-nav" id="protocolList">
       <li><a href="#mi" class="active">Miyokard Enfarktüsü (MI)</a></li>
       <li><a href="#af">Atriyal Fibrilasyon (AF / RVR)</a></li>
+      <li><a href="#anafilaksi">Anafilaksi (Erişkin & Pediatrik)</a></li>
     </ul>
   </aside>
 
@@ -306,6 +307,99 @@
         <ul>
           <li>Hızı &lt; 110/dk'ya inen, semptomu gerileyen ve hemodinamisi stabil olan hasta oral hız kırıcı ve antikoagülan planı için <strong>Kardiyoloji Polikliniği</strong> kontrolü önerilerek taburcu edilebilir.</li>
           <li>Hız kırılamıyorsa, hipotansiyon derinleşiyorsa veya göğüs ağrısı/troponin yüksekliği varsa 112 KKM üzerinden acil sevk planlanır.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- ANAFİLAKSİ KARTI -->
+    <div id="anafilaksi" class="card">
+      <div class="card-head">
+        <div>
+          <h2>ANAFİLAKSİ PROTOKOLÜ (Erişkin & Pediatrik)</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Acil Müdahale, Farmakoloji & Havayolu Güvencesi</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
+
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (FARMAKOLOJİ & ACİL MÜDAHALE)</h3>
+        
+        <div class="subhead" style="color: var(--red-text);">1. Basamak: İLK VE HAYAT KURTARICI İLAÇ (ADRENALİN)</div>
+        <p style="font-size: 0.85rem; color: #991b1b; font-weight: 700; margin-bottom: 6px;">
+          ⚠️ DİKKAT: Avil veya Kortizon ile VAKİT KAYBETME! Damar yolu bekleme, SC (deri altı) yapma!
+        </p>
+        <ol>
+          <li>
+            <strong>Erişkin Dozu:</strong> <strong>0.5 mg IM</strong> (Standart 1 mg/1 ml'lik 1:1000 ampulün <strong>YARISI = 0.5 ml</strong>).<br>
+            <em>Uygulama Yeri:</em> Uyluk anterolateral orta 1/3 (Vastus lateralis) kası içine dik açıyla.
+          </li>
+          <li>
+            <strong>Pediatrik Doz:</strong> <strong>0.01 mg/kg IM</strong> (1:1000 ampulden sulandırmadan 0.01 ml/kg).<br>
+            <em>Maksimum tek doz:</em> <strong>0.3 mg (0.3 ml)</strong>.
+          </li>
+          <li>
+            <strong>Tekrarlama:</strong> Klinik yanıt yoksa veya semptomlar nüksederse <strong>5-15 dakikada bir</strong> aynı doz IM tekrarlanır (Tekrarlayan dozlardan çekinme!).
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Basamak: HAVAYOLU, OKSİJEN & AGRESİF SIVI</div>
+        <ol start="4">
+          <li>
+            <strong>Pozisyon:</strong> Hastayı sırtüstü düz yatır, bacakları yukarı kaldır (Trendelenburg). <span style="color: #b91c1c; font-weight: 600;">(Ani ayağa kaldırma veya oturtma mortaliteyi artırır!)</span>
+          </li>
+          <li>
+            <strong>Oksijen:</strong> Rezervuarlı geri solumasız maske ile yüksek akım O₂ (10-15 L/dk). Stridor veya larinks ödemi varsa nebüle <strong>1 ampul adrenalin (1 mg) + 3 cc SF</strong> koyup ver.
+          </li>
+          <li>
+            <strong>Agresif Sıvı (Hipotansiyon / Şokta):</strong>
+            <ul>
+              <li><em>Erişkin:</em> 1000 - 2000 cc SF ilk 30-60 dakikada hızlı infüzyon.</li>
+              <li><em>Pediatrik:</em> 20 ml/kg SF hızlı bolus.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #374151; margin-top: 12px;">3. Basamak: İKİNCİ SIRA İLAÇLAR (Adrenalin Sonrası)</div>
+        <ol start="7">
+          <li>
+            <strong>Metilprednizolon (Prednol):</strong> 1-2 mg/kg IV (Erişkinde standart 40-80 mg IV) <em>VEYA</em> <strong>Deksametazon (Dekort):</strong> 8-16 mg IV (Çocukta: 0.3-0.6 mg/kg).
+          </li>
+          <li>
+            <strong>Feniramin (Avil):</strong> 1 ampul yavaş IV/IM (Çocukta: 1 mg/kg, maksimum 50 mg).
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #854d0e; margin-top: 12px;">Dirençli Şok (Konsültan / Yoğun Bakım):</div>
+        <p style="font-size: 0.85rem; color: #854d0e;">
+          Tekrarlayan IM adrenalin ve agresif sıvıya rağmen hipotansiyon sürüyorsa: <strong>Adrenalin IV İnfüzyon</strong> (1-10 mcg/dk titre edilir). <em>Hasta Beta-bloker kullanıyorsa adrenalinden yanıt alınamayabilir &rarr; Glukagon 1-5 mg IV düşünülür.</em>
+        </p>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: KLİNİK YÖNETİM & SEVK</h3>
+        
+        <p><strong>1. Tanı Tuzağı (Cilt Bulgusu Şart Değildir!):</strong></p>
+        <ul>
+          <li>Hastaların %10-20'sinde ürtiker veya anjiyoödem gelişmeyebilir! Alerjen maruziyeti sonrası ani hipotansiyon veya tek başına laringospazm/stridor anafilaksidir.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>2. KÖTÜLEŞİRSE: ACİL SEVK & HAVAYOLU GÜVENCESİ (112 KKM):</strong></p>
+        <ul>
+          <li>İkinci doz IM adrenaline rağmen yanıtsızlık, ilerleyen stridor veya derinleşen hipotansiyonda vakit kaybetmeden <strong>112 KKM ile irtibata geçilip Kırmızı Kod ile yoğun bakım / ileri merkez sevki başlatılır</strong>.</li>
+          <li>Larinks ödemi dakikalar içinde glottisi kapatabilir; stridor, ses kısıklığı veya sekresyonunu yutamama tablosu derinleşiyorsa gecikmeden <strong>erken entübasyon</strong> planlanmalı, zor havayolu seti ve krikotiroidotomi kiti hazır bulundurulmalıdır.</li>
+          <li>Sevk sırasında hasta kesinlikle ayağa kaldırılmaz; supin pozisyonda, yüksek akım O₂ ve açık geniş damar yolundan hızlı kristaloid infüzyonu ile nakledilir.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>3. Bifazik Reaksiyon & Gözlem:</strong></p>
+        <ul>
+          <li>Semptomlar tamamen gerilese dahi 4-8 saat sonra nüksedebilir (Bifazik anafilaksi). Hastalar acil serviste <strong>en az 6-8 saat gözlem altında tutulmalıdır</strong>.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>4. Reçete & Taburculuk:</strong></p>
+        <ul>
+          <li>Oral Antihistaminik (örn. Desloratadin 5 mg 1x1 veya Setirizin 10 mg 1x1) + Oral Kortikosteroid (Prednol 16-32 mg tb, 3-5 gün içinde azalarak kesilecek şekilde).</li>
+          <li>Şiddetli anafilaksi öyküsü olan hastalara taburculukta <strong>Adrenalin Oto-enjektörü (Pen)</strong> reçete edilerek Alerji / İmmünoloji poliklinik kontrolü önerilir.</li>
         </ul>
       </div>
     </div>

@@ -200,6 +200,7 @@
       <li><a href="#status-epileptikus">Status Epileptikus (Erişkin & Pediatrik)</a></li>
       <li><a href="#eriskin-solunum">Erişkin ÜSYE, Bronşit & Pnömoni</a></li>
       <li><a href="#yanik-protokolu">Yanık Yönetimi & Pansuman</a></li>
+      <li><a href="#dka-protokolu">Diyabetik Ketoasidoz (DKA)</a></li>
     </ul>
   </aside>
 
@@ -1377,6 +1378,86 @@
           <li><strong>İnhalasyon Yanığı:</strong> Kapalı alanda kalma, burun kıllarında yanma, isli balgam, ses kısıklığı (Acil profilaktik entübasyon gerektirebilir!).</li>
           <li><strong>Elektrik ve Kimyasal Yanıklar:</strong> EKG takibi ve cerrahi debritman için doğrudan sevk edilmelidir.</li>
           <li><strong>Sirkumferansiyel Yanıklar:</strong> Kol, bacak veya göğsü çepeçevre saran yanıklar kompartman sendromu ve solunum kısıtlılığı açısından eskarotomi gerektirir.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- DİYABETİK KETOASİDOZ (DKA) KARTI -->
+    <div id="dka-protokolu" class="card">
+      <div class="card-head">
+        <div>
+          <h2>DİYABETİK KETOASİDOZ (DKA) PROTOKOLÜ</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Sıvı Resüsitasyonu, İnsülin Titrasyonu & Potasyum Güvenliği</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
+
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (FARMAKOLOJİ & BASAMAKLI PROTOKOL)</h3>
+        
+        <div class="subhead" style="color: var(--red-text);">1. İlçe / Acil İlk Saat (Yalnızca Sıvı! İnsülin Başlama):</div>
+        <ol>
+          <li>
+            <strong>İlk 1 Saatlik Hidrasyon:</strong><br>
+            &bull; <strong>Erişkin:</strong> 1000 cc SF (İzotonik) 1 saatte gidecek şekilde IV infüzyon.<br>
+            &bull; <strong>Pediatrik:</strong> 10 ml/kg SF 1 saatte yavaş infüzyon (Beyin ödemi riski nedeniyle hızlı bolus yapma!).<br>
+            <em>⚠️ İlçe acilinde potasyum sonucu ve YBÜ yatağı yoksa 1000 cc SF takılarak insülinsiz sevk edilir.</em>
+          </li>
+          <li><strong>İdrar Çıkışı & Sonda:</strong> Saatlik idrar takibi için foley sonda tak (hedef &gt; 0.5 ml/kg/saat).</li>
+        </ol>
+
+        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Potasyum (K⁺) Kontrolü (Hayati Kırmızı Çizgi!):</div>
+        <ol start="3">
+          <li><strong>K⁺ &lt; 3.3 mEq/L ise:</strong> <strong>İNSÜLİN KESİNLİKLE VERİLMEZ!</strong> 20-30 mEq/saat KCl IV infüzyonla K⁺ &gt; 3.3 olana kadar düzelt, sonra insülin başla (Kardiyak arrest riski!).</li>
+          <li><strong>K⁺ 3.3 - 5.2 mEq/L ise:</strong> İdrar çıkışı varsa her 1000 cc mayiye <strong>20 - 30 mEq KCl (1-1.5 ampul)</strong> ekle. İnsülini güvenle başla.</li>
+          <li><strong>K⁺ &gt; 5.2 mEq/L ise:</strong> Mayiye potasyum ekleme; 2 saatte bir K⁺ kontrolü yap.</li>
+        </ol>
+
+        <div class="subhead" style="color: #374151; margin-top: 12px;">3. İnsülin Protokolü & Titrasyon (2. Saatten İtibaren):</div>
+        <ol start="6">
+          <li>
+            <strong>Kristalize İnsülin (Humulin R / Actrapid):</strong> <strong>0.1 Ünite/kg/saat IV infüzyon</strong> (Ayrı damar yolundan).
+            <br><em>Pratik Hazırlık:</em> 50 Ü regüler insülin 50 cc SF içine çekilir (1 cc = 1 Ünite). 70 kg hasta için saatte 7 cc (7 Ü/saat) gönderilir.
+          </li>
+          <li>
+            <strong>Hedef Düşüş Hızı:</strong> Saatte <strong>50 - 75 mg/dL</strong> düşüş. 
+            <br>&bull; Saatte &lt; 50 mg/dL düşüyorsa: İnsülin hızını 1.5 - 2 katına çıkar.
+            <br>&bull; Saatte &gt; 75-100 mg/dL düşüyorsa: Hızı yarıya indir (Hızlı düşüş beyin ödemi yapar!).
+          </li>
+          <li>
+            <strong>Kan Şekeri &lt; 200 - 250 mg/dL Olunca (Kritik Basamak):</strong><br>
+            İnsülini kesme! Dozu 0.05 Ü/kg/saate indir. Mayiyi <strong>%5 Dekstroz + 1/3 SF</strong> (saatte 100-150 cc) olarak değiştir. (Amaç: Hipoglisemiye sokmadan keton asidozunu kapatana kadar insülini sürdürmektir).
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #854d0e; margin-top: 12px;">⚠️ KIRMIZI ÇİZGİLER (HAYATİ TUZAKLAR):</div>
+        <ul style="color: #854d0e; font-size: 0.85rem;">
+          <li><strong>Bikarbonat Verme:</strong> pH &gt; 6.9-7.0 ise bikarbonat KONTRENDİKEDİR! Paradoksal beyin asidozu ve laktat artışı yapar. Yalnızca pH &lt; 6.9 ise düşünülür.</li>
+          <li><strong>K⁺ Bilmeden İnsülin Başlama:</strong> Hipokalemik hastada insülin fatal ventriküler aritmi ve asistoliye neden olur.</li>
+        </ul>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: DKA TANI KRİTERLERİ & SEVK</h3>
+        
+        <p><strong>1. DKA Tanı Triadı:</strong></p>
+        <ul>
+          <li><strong>Hiperglisemi:</strong> Kan şekeri &gt; 250 mg/dL (Öglisemik DKA'da SGLT-2 inhibitörü kullananlarda şeker normal olabilir!).</li>
+          <li><strong>Ketoz:</strong> Kanda veya idrarda keton pozitifliği.</li>
+          <li><strong>Metabolik Asidoz:</strong> Venöz/arteriyel pH &lt; 7.30, Bikarbonat (HCO₃) &lt; 18 mEq/L, Anyon açığı &gt; 10-12.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>2. Ölümcül Komplikasyon: Akut Beyin Ödemi:</strong></p>
+        <ul>
+          <li>Özellikle çocuklarda aşırı hızlı sıvı veya insülin verilmesiyle oluşur.</li>
+          <li><em>Bulgular:</em> Baş ağrısı, letarji, kusma, bradikardi, hipertansiyon (Cushing triadı).</li>
+          <li><em>Tedavi:</em> Sıvıyı hemen yavaşlat; <strong>%3 Hipertonik NaCl (5 ml/kg 30 dk)</strong> veya <strong>Mannitol 0.5-1 g/kg IV</strong> uygula, acil Beyin BT ve YBÜ sevki sağla.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>3. KÖTÜLEŞİRSE: 112 KKM & Yoğun Bakım Sevki:</strong></p>
+        <ul>
+          <li>Ağır asidozu (pH &lt; 7.10), elektrolit imbalansı, şuur bulanıklığı veya altta yatan ağır enfeksiyon/sepsis kuşkusu olan hastalar 112 KKM üzerinden <strong>3. Basamak Dahiliye / Pediatrik Yoğun Bakım Ünitesi</strong> olan merkeze acil sevk edilir.</li>
         </ul>
       </div>
     </div>

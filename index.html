@@ -173,7 +173,39 @@
   </style>
 </head>
 <body>
+<!-- === HUKUKİ KORUMA MODAL BAŞLANGICI === -->
+<div id="legalModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); z-index: 999999; align-items: center; justify-content: center; font-family: sans-serif;">
+  <div style="background: #ffffff; max-width: 520px; width: 90%; border-radius: 10px; padding: 22px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.4); border: 2px solid #cbd5e1; box-sizing: border-box;">
+    <h3 style="margin: 0 0 12px 0; color: #991b1b; font-size: 1.15rem; font-weight: 700;">
+      ⚠️ YASAL BİLGİLENDİRME & SORUMLULUK REDDİ
+    </h3>
+    <div style="font-size: 0.85rem; color: #334155; line-height: 1.5; max-height: 250px; overflow-y: auto; padding-right: 8px; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
+      <p style="margin-top: 0;"><strong>Değerli Meslektaşım;</strong></p>
+      <p>Bu platform (<code>doctoremin.com</code>), yalnızca tıp hekimleri ve sağlık profesyonellerine yönelik hazırlanmış <strong>özet bir bedside (başucu) klinik hafıza desteğidir</strong>. Resmi tanı/tedavi kılavuzu veya protokolü niteliğinde değildir.</p>
+      <p>&bull; Tıbbi kararlar; hastanın klinik tablosu, kontrendikasyonları ve güncel mevzuat ışığında <strong>münhasıran hastayı bizzat takip eden hekimin mesleki takdirindedir</strong>.</p>
+      <p>&bull; Sitede yer alan doz, enjeksiyon ve kontrol listeleri bilgi amaçlı derleme olup; olası güncellemeler, eksiklikler veya uygulama sonuçlarından site sahibi hukuki ve cezai olarak sorumlu tutulamaz.</p>
+      <p style="margin-bottom: 0;">Bu siteyi kullanarak tüm mesleki ve klinik sorumluluğun şahsınıza ait olduğunu kabul etmiş sayılırsınız.</p>
+    </div>
+    <button onclick="acceptEminLegal()" style="width: 100%; padding: 12px; background: #1e3a8a; color: #ffffff; border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 600; cursor: pointer;">
+      Okudum, Anladım ve Kabul Ediyorum
+    </button>
+  </div>
+</div>
 
+<script>
+  (function() {
+    var accepted = localStorage.getItem('eminSiteLegalAccepted');
+    if (!accepted) {
+      document.getElementById('legalModal').style.display = 'flex';
+    }
+  })();
+
+  function acceptEminLegal() {
+    localStorage.setItem('eminSiteLegalAccepted', 'true');
+    document.getElementById('legalModal').style.display = 'none';
+  }
+</script>
+<!-- === HUKUKİ KORUMA MODAL BİTİŞİ === -->
 <div class="layout">
   <!-- SOL LİSTE & CV BUTONU -->
   <aside>
@@ -4619,49 +4651,49 @@
         </ul>
       </div>
     </div>
-    <!-- ACİLDE HEKİM KORUMA & ADLİ EPİKRİZ ŞABLONU -->
+
+    <!-- ACİLDE FİZİK MUAYENE KONTROL LİSTESİ & STANDART EPİKRİZ REHBERİ -->
     <div id="adli-muayene-epikriz" class="card">
       <div class="card-head">
         <div>
-          <h2>ACİLDE HEKİM KORUMA & DEFANSİF EPİKRİZ ŞABLONU</h2>
-          <div style="font-size: 0.8rem; color: var(--text-sub);">Adli Güvence, Malpraktis Kalkanı, Kırmızı Bayrak Dışlama & Sistem Şablonu</div>
+          <h2>ACİLDE FİZİK MUAYENE STANDARDI & EPİKRİZ REHBERİ</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Atlanmaması Gereken Klinik Bulgular, Kırmızı Bayrak Dışlama & Belgeleme Standartları</div>
         </div>
         <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
       </div>
 
       <div class="box-emin">
-        <h3>EMİN'SEN: (HBYS SİSTEMİNE DOĞRUDAN KOPYALANABİLİR ŞABLON)</h3>
-        <p style="font-size: 0.85rem; margin-bottom: 8px; color: var(--text-sub);">
-          <em>Aşağıdaki metin; SVO, SAK, Menenjit, Akut Koroner Sendrom, Akut Batın, DVT ve Kauda Ekuina gibi acilde en sık malpraktis konusu olan tabloları adli olarak dışlamak için optimize edilmiştir:</em>
+        <h3>EMİN'SEN: (BİZZAT YAPILAN MUAYENENİN KAYDA GEÇİRİLME STANDARDI)</h3>
+        <p style="font-size: 0.82rem; margin-bottom: 10px; color: #991b1b; font-weight: 600;">
+          ⚠️ YASAL & ETİK KURAL: Aşağıdaki taslak yalnızca hekim tarafından BİZZAT YAPILMIŞ VE DOĞRULANMIŞ fizik muayene bulgularının eksiksiz belgelenmesi için bir kontrol listesidir (checklist). Yapılmayan hiçbir muayene bulgusu epikrize işlenmemelidir.
         </p>
 
-        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; font-family: monospace; font-size: 0.82rem; line-height: 1.5; color: #0f172a; user-select: all;">
-ANAMNEZ & VİTAL BULGULAR:<br>
-Hasta acil servise halsizlik, miyalji ve genel vücut ağrısı şikayetiyle başvurdu. Göğüs ağrısı, nefes darlığı, ani başlayan şiddetli baş ağrısı, senkop ve travma öyküsü yok.<br>
-TA: .../... mmHg | Nabız: .../dk ritmik | SpO2: %... | Ateş: ...°C | KŞ: ... mg/dL<br><br>
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; font-family: monospace; font-size: 0.82rem; line-height: 1.5; color: #0f172a;">
+ANAMNEZ & VİTAL PARAMETRELER (Hekim Tarafından Görülüp İmzalanan):<br>
+Hasta acil servise halsizlik, kas-eklem ağrısı şikayetiyle başvurdu. Göğüs ağrısı, nefes darlığı, ani şiddetli baş ağrısı, senkop veya travma öyküsü tariflemedi.<br>
+TA: .../... mmHg | Nabız: .../dk | SpO2: %... | Ateş: ...°C | KŞ: ... mg/dL<br><br>
 
-FİZİK MUAYENE BULGULARI:<br>
-- Genel Durum: İyi-orta, hemodinamik stabil. Bilinç açık, koopere, oryante (GKS: 15).<br>
-- Baş-Boyun: Işık refleksi bilateral direkt/indirekt doğal, pupiller izokorik. Ense sertliği, Kernig, Brudzinski yok (Meningeal irritasyon bulgusu negatif). Fasiyal asimetri yok.<br>
-- Solunum Sistemi: Her iki hemitoraks solunuma eşit katılıyor. Solunum sesleri bilateral kaba/doğal, ral, ronküs, wheezing veya ek ses yok. Siyanoz/dispne izlenmedi.<br>
-- Kardiyovasküler Sistem: S1 + S2 doğal, ek ses veya üfürüm yok. Periferik nabızlar bilateral palpabl ve ritmik. Radyofemoral nabız gecikmesi yok.<br>
-- Batın: Batın rahat, inspeksiyonda distansiyon yok. Palpasyonda defans yok, rebound yok, organomegali yok. Bağırsak sesleri normoaktif. KVAH (Kostovertebral açı hassasiyeti) bilateral negatif.<br>
-- Nörolojik Muayene: Kraniyal sinir muayenesi intakt. 4 ekstremitede motor kas gücü tam (5/5). Duyu defisiti yok. Serebellar testler (diz-topuk, burun-parmak) bilateral becerikli. Dizartri veya afazi yok.<br>
-- Ekstremite & Vasküler: Bilateral alt ekstremitede çap farkı yok. Baldır palpasyonunda hassasiyet yok, Homans negatif. Pretibial ödem (-/-). İnspeksiyonda asimetrik kızarıklık, şişlik veya ısı artışı izlenmedi.<br><br>
+BİZZAT YAPILAN FİZİK MUAYENE:<br>
+- Genel Durum: Stabil, GKS: 15. Bilinç açık, koopere, oryante.<br>
+- Baş-Boyun / Nörolojik: Pupiller izokorik, IŞR (+/+). Ense sertliği, Kernig, Brudzinski negatif (Meningeal irritasyon bulgusu yok). Kraniyal sinirler intakt, fasiyal asimetri yok. 4 ekstremite motor kas gücü tam (5/5). Serebellar testler becerikli.<br>
+- Solunum: Her iki hemitoraks solunuma eşit katılıyor. Solunum sesleri bilateral kaba/doğal; ral, ronküs, wheezing saptanmadı.<br>
+- Dolaşım: Kalp sesleri ritmik, üfürüm/ek ses duyulmadı. Periferik nabızlar bilateral palpabl.<br>
+- Batın: Batın rahat, distansiyon yok. Defans ve rebound saptanmadı. KVAH bilateral negatif.<br>
+- Ekstremite / Vasküler: Bilateral baldır palpasyonunda hassasiyet yok, Homans negatif. Bacaklarda çap farkı, asimetrik şişlik veya ısı artışı izlenmedi. Pretibial ödem (-/-).<br><br>
 
-ÇIKIŞ / TABURCULUK NOTU:<br>
-Hastanın vital parametreleri stabil seyretti. Semptomatik tedavisi tamamlandı. Hastaya ve/veya yakınına kırmızı bayrak teşkil eden acil durumlar (göğüs ağrısı, nefes darlığı, ani bilinç bulanıklığı, nöbet, geçmeyen kusma, yüksek ateş, tek taraflı güçsüzlük/konuşma bozukluğu) ayrıntılı olarak anlatıldı. Bu veya benzeri durumlarda gecikmeksizin 112 KKM aranarak veya en yakın acil servise tekrar başvurması gerektiği sözlü olarak bildirildi. İlgili poliklinik kontrolü önerilerek taburcu edildi.
+TABURCULUK BİLGİLENDİRMESİ:<br>
+Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşma/güçsüzlük, konuşma bozukluğu, geçmeyen kusma ve yüksek ateş gibi acil kırmızı bayrak semptomları sözlü olarak anlatıldı. Bu durumlarda derhal acil servise başvurması bildirildi. İlgili poliklinik kontrolü önerilerek taburcu edildi.
         </div>
       </div>
 
       <div class="box-degilsen">
-        <h3>EMİN DEĞİLSEN: ADLİ DAVALARDA HEKİMİ YAKAN 5 EKSİK NOT</h3>
+        <h3>EMİN DEĞİLSEN: ADLİ VE TIBBİ AÇIDAN EN SIK ATLANAN 5 HATA</h3>
         <ul>
-          <li><strong>1. "Hastanın Genel Durumu İyi" Tuzağı:</strong> Sadece genel durumu iyi yazmak yetersizdir. Vitalleri (özellikle TA, Nabız, Ateş ve SpO2) dosyaya hekim imzalamadan önce mutlaka işlenmelidir. Vitalleri anormal (taşikardik, hipotansif, hipoksik) hastayı evine göndermek doğrudan kusur sayılır.</li>
-          <li><strong>2. Bacak Çap Farkı ve DVT Belirtilmemesi:</strong> Halsizlik veya bacak ağrısıyla gelip kas gevşeticiyle taburcu edilen ve saatler sonra Pulmoner Emboliyle ölen olgularda mahkemenin baktığı ilk yer: <em>"Bacak muayenesi, çap farkı, Homans testi yazılmış mı?"</em> sorusudur.</li>
-          <li><strong>3. Ense Sertliği Yazılmayan Baş Ağrısı:</strong> "Gripal enfeksiyon" denilip gönderilen ancak SAK veya Menenjit çıkan olgularda <em>"Meningeal irritasyon bulgusu ekarte edilmemiştir"</em> tespiti hekimi savunmasız bırakır.</li>
-          <li><strong>4. Çocukta Karın Ağrısı & İstemsiz Defans:</strong> Çocuk ağlarken karın muayenesi yapılmaz; sakinleştiğinde bakılmalı ve epikrize <em>"İstemsiz defans ve rebound izlenmedi"</em> açıkça yazılmalıdır.</li>
-          <li><strong>5. "Acil Durumlar Anlatıldı" Cümlesinin Yokluğu:</strong> Taburculuk notunda kırmızı bayrakların sözlü olarak anlatıldığı ve poliklinik kontrolü önerildiği yazmıyorsa, hasta tarafı "Bize hiçbir şey söylenmedi, hekim uyarısız gönderdi" iddiasında bulunabilir.</li>
+          <li><strong>⚠️ Gerçeğe Aykırı Kayıt Suçtur:</strong> Yapılmamış bir nörolojik veya vasküler muayenenin hazır metinlerle sisteme kopyalanması resmi belgede sahtecilik ve tıbbi kusur oluşturur. Muayene her hasta için tek tek yapılmalı, sadece yapılanlar yazılmalıdır.</li>
+          <li><strong>Vitalleri Görmeden İmza Atma:</strong> Dosyada taşikardik (&gt; 100/dk), hipotansif (&lt; 90 mmHg) veya yüksek ateşli görünen bir hastayı "genel durum iyi" diyerek göndermek doğrudan malpraktis sorumluluğu doğurur.</li>
+          <li><strong>Halsiz Hastada DVT & Emboli Tuzağı:</strong> Bacak muayenesi (çap farkı, asimetrik ödem, baldır hassasiyeti) yapılmadan atlanan pulmoner emboliler en sık dava konusudur.</li>
+          <li><strong>Baş Ağrısında Meningeal İrritasyon:</strong> Ense sertliği ve ateş ekarte edilmeden "kas ağrısı / gerilim tipi baş ağrısı" tanısıyla taburculuk ciddi risk taşır.</li>
+          <li><strong>Sözlü Kırmızı Bayrak Uyarısı:</strong> Taburculuk notuna hastaya olası tehlike bulgularının anlatıldığının ve kontrol önerildiğinin not düşülmesi hem hekimin hem hastanın güvenliğidir.</li>
         </ul>
       </div>
     </div>

@@ -211,7 +211,8 @@
   <aside>
     <a href="#" class="brand">DOCTOR<span>EMİN</span></a>
     
-    <button class="btn-cv" onclick="toggleModal(true)">👤 Dr. Emin Dalseçkin (CV)</button>
+    <button class="btn-cv" onclick="toggleModal(true)">👤 Hakkımda </button>
+    <button class="btn-cv" onclick="toggleOnerilerModal(true)" style="margin-top: 6px; background: #f8fafc; border-color: #cbd5e1; color: #1e3a8a;">💡 Genç Meslektaşlarıma Öneriler & İletişim</button>
     
     <input type="text" class="search-input" id="sidebarSearch" placeholder="Tanı / ilaç ara..." onkeyup="filterMenu()">
     
@@ -4714,7 +4715,7 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
     <span onclick="toggleModal(false)" style="position: absolute; top: 16px; right: 20px; font-size: 1.5rem; font-weight: bold; color: #64748b; cursor: pointer; line-height: 1;">&times;</span>
 
     <h3 style="margin: 0 0 16px 0; color: #0f172a; font-size: 1.25rem; font-weight: 700; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">
-      Dr. Emin Dalseçkin
+      Dr. Muhammed Emin Dalseçkin
     </h3>
 
     <div style="font-size: 0.9rem; color: #334155; line-height: 1.65; display: block;">
@@ -4736,7 +4737,64 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
 </p>
   </div>
 </div>
+<!-- GENÇ MESLEKTAŞLARIMA ÖNERİLER MODAL -->
+<div id="onerilerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(4px); z-index: 999999; align-items: center; justify-content: center;">
+  <div style="background: #ffffff; max-width: 680px; width: 92%; max-height: 88vh; border-radius: 12px; padding: 26px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 1px solid #e2e8f0; position: relative; box-sizing: border-box; display: flex; flex-direction: column;">
+    
+    <span onclick="toggleOnerilerModal(false)" style="position: absolute; top: 16px; right: 20px; font-size: 1.6rem; font-weight: bold; color: #64748b; cursor: pointer; line-height: 1;">&times;</span>
 
+    <h3 style="margin: 0 0 14px 0; color: #0f172a; font-size: 1.2rem; font-weight: 700; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; padding-right: 30px;">
+      💡 Genç Meslektaşlarıma Öneriler & Saha Refleksleri
+    </h3>
+
+    <div style="font-size: 0.88rem; color: #334155; line-height: 1.65; overflow-y: auto; padding-right: 8px;">
+      <p style="margin-top: 0;">
+        <strong>Saygıdeğer Genç Meslektaşlarım,</strong><br>
+        Öncelikle kutsal ve onurlu hekimlik mesleğiniz hayırlı olsun; beyaz önlüğünüzü ömrünüz boyunca gururla taşımanızı dilerim.
+      </p>
+      
+      <p>
+        Tıp fakültesinden mezun olduktan sonra kendimi bir anda yanımda acil tıp uzmanı olmadan, bir ilçe devlet hastanesinin acil servisinde tek başıma nöbet tutarken buldum. Yeşil alan reçetesinden ibaret sanılan o nöbetlerde; alçıdan cerrahi sütura, kardiyak arrest resüsitasyonundan çoklu trafik kazalarına, tansiyon pnömotorakstan penetran bıçaklanmalara, suda boğulmadan çocukta status epileptikusa, dekompanse kalp yetmezliğinden kadın doğum uzmanı olmadığı için ebelerle beraber bizzat yaptırmak zorunda kaldığım doğumlara kadar hekimliğin en çıplak ve en sert yüzüyle yüzleştim.
+      </p>
+
+      <p>
+        Bu tecrübenin bana öğrettiği ilk gerçek şudur: <strong>Acil servisler, gerçek hekimliğin öğrenildiği, kriz yönetiminin refleks haline geldiği ve mesleğin mutfağı olan yerlerdir.</strong> Şahsi kanaatim; her hekimin toplum sağlığı merkezine veya aile hekimliğine veya uzmanlığa geçmeden önce en az birkaç ay aktif acil servis havası solumasını zorunlu tutmak gerektiğidir. Bu, klinik sezgilerini ve mesleki özgüvenini ömür boyu diri tutacaktır.
+      </p>
+
+      <div style="background: #f8fafc; border-left: 4px solid #1e3a8a; padding: 12px 14px; border-radius: 4px; margin: 14px 0;">
+        <h4 style="margin: 0 0 6px 0; color: #1e3a8a; font-size: 0.95rem;">1. Ekip Ruhu & Deontoloji (Tek Başına Kahraman Olunmaz)</h4>
+        Acil servis bir ekip işidir. Hemşirelerimize, ebelerimize, paramedik ve acil tıp teknisyenlerimize, temizlik ve güvenlik personeline her zaman saygı ve nezaketle yaklaşın. Sahanın pratiğini yutmuş kıdemli pratisyen meslektaşlarınızdan öğrenmeye gayret edin; sormaktan asla çekinmeyin. Beraber nöbet tuttuğunuz mesai arkadaşlarınızla iyi geçinin, nöbet yükünde kimsenin hakkını yemeyin.
+      </div>
+
+      <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px 14px; border-radius: 4px; margin: 14px 0;">
+        <h4 style="margin: 0 0 6px 0; color: #991b1b; font-size: 0.95rem;">2. Her Hastada Sorulacak İki Hayati Soru</h4>
+        &bull; <strong>"Bilinen bir ilaç alerjiniz var mı?":</strong> Hastalar sormazsanız çoğu zaman söylemez. Her reçetede ve enjeksiyon isteminde bunu sormak mutlak refleksiniz olsun.<br>
+        &bull; <strong>"Gebelik veya emzirme durumu var mı?":</strong> Doğurganlık çağındaki her kadın hastada son adet tarihini ve gebelik/emzirme ihtimalini sorgulamadan ne sistemik ne de topikal ajan reçete edin.
+      </div>
+
+      <div style="background: #f8fafc; border-left: 4px solid #0284c7; padding: 12px 14px; border-radius: 4px; margin: 14px 0;">
+        <h4 style="margin: 0 0 6px 0; color: #0369a1; font-size: 0.95rem;">3. Başucu Kaynak & Platform Önerileri</h4>
+        İlk aylarda tecrübeli meslektaşların vaka tartıştığı ücretli danışma gruplarından faydalanabilirsiniz. Benim klinik pratiğime çok şey katan kaynakları sizlere de öneririm:<br>
+        &bull; <strong>Acilde 100 Vaka Kitabı:</strong> Semptomdan tanıya klinik mantığı oturtmak için mükemmel bir rehberdir.<br>
+        &bull; <strong>İlyas Hoca'nın Reçete Sitesi (ilyasyolbas.com):</strong> Poliklinikte kafama takılan reçetelerde arama motoruna <em>"... reçete ilyas"</em> yazıp baktığım çok olmuştur; pratik reçeteleme için çok kıymetlidir.<br>
+        &bull; <strong>Acil Çalışanları (acilcalisanlari.com):</strong> EKG yorumlama, acil ilaç infüzyonları ve akut algoritmalar için eksiksiz bir Türkçe arşivdir.<br>
+        &bull; <strong>UpToDate:</strong> Spesifik, atipik ve kanıta dayalı derinleşmek istediğiniz her klinik soruda ana kılavuzunuz olsun.<br>
+        &bull; <strong>YerliReçete (yerlirecete.com):</strong> Reçetelerinizde yerli ve milli eşdeğer ilaçları öncelemek değerli bir mesleki duyarlılıktır. Ayrıca sırf hasta istedi diye endike olmayan ilaçları yazmamanız, SGK'nın ve kamunun yararını gözetmek için elzemdir.
+      </div>
+
+      <p>
+        <strong>doctoremin.com'un Hazırlanış Mantığı:</strong><br>
+        Bu sitede yer alan kartlar; onlarca reçete rehberi, güncel acil kılavuzları ve ilçe acillerinde bizzat tuttuğum klinik çalışma notlarının senteziyle hazırlandı. Amacım, nöbet anında karmaşık sayfalar arasında kaybolmadan en rafine ve güvenli bilgiye saniyeler içinde ulaşabilmenizdir.
+      </p>
+
+      <div style="padding: 10px 14px; background: #ecfdf5; border-left: 4px solid #10b981; border-radius: 4px; color: #065f46; font-size: 0.85rem; margin-top: 14px;">
+        <strong>Yaşayan Bir Kütüphane:</strong> Sitede fark ettiğiniz bir güncelleme veya klinik katkılarınız için: <strong>dalseckinemin@gmail.com</strong><br>
+        <em>Yolunuz açık, nöbetleriniz sakin, kararlarınız isabetli olsun.</em>
+      </div>
+    </div>
+
+  </div>
+</div>
 <script>
   function toggleModal(show) {
     document.getElementById('cvModal').style.display = show ? 'flex' : 'none';

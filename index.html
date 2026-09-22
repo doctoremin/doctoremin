@@ -224,6 +224,7 @@
       <li><a href="#vt">Ventriküler Taşikardi (Nabızlı VT)</a></li>
 <li><a href="#cpr">Kardiyak Arrest & CPR (VF / Asistoli)</a></li>
       <li><a href="#svt">Supraventriküler Taşikardi (SVT)</a></li>
+            <li><a href="#bradikardi-protokolu">Semptomatik Bradikardi & AV Blok</a></li>
       <li><a href="#aort">Aort Diseksiyonu</a></li>
       <li><a href="#astim-koah">Astım & KOAH Atak (Erişkin & Pediatrik)</a></li>
       <li><a href="#pediatrik-age">Pediatrik AGE (Kusma, İshal & Sıvı)</a></li>
@@ -235,7 +236,6 @@
       <li><a href="#yanik-protokolu">Yanık Yönetimi & Pansuman</a></li>
       <li><a href="#dka-protokolu">Diyabetik Ketoasidoz (DKA)</a></li>
       <li><a href="#hipoglisemi-protokolu">Hipoglisemi Yönetimi</a></li>
-      <li><a href="#bradikardi-protokolu">Semptomatik Bradikardi & AV Blok</a></li>
 <li><a href="#organofosfat-protokolu">Organofosfat (Kolinerjik) Toksisitesi</a></li>
       <li><a href="#elektrolit-acilleri">Elektrolit Acilleri (K⁺ & Na⁺)</a></li>
       <li><a href="#iye-protokolu">İdrar Yolu Enfeksiyonu (Sistit & Piyelonefrit)</a></li>
@@ -318,18 +318,18 @@
       <!-- EMİN'SEN -->
       <div class="box-emin">
         <h3>EMİN'SEN: (FARMAKOLOJİ)</h3>
-        <div class="subhead" style="color: var(--red-text);">Sorgusuz Sualsiz Hemen Kendin Yap (ŞART):</div>
+    <div class="subhead" style="color: var(--red-text);">Sorgusuz Sualsiz Hemen Kendin Yap (ŞART):</div>
         <ol>
           <li><strong>Aspirin (Coraspin):</strong> 300 mg çiğnet (veya 150 mg IV).</li>
-          <li><strong>Klopidogrel (Plavix):</strong> 600 mg yuttur <em>VEYA</em> <strong>Tikagrelor (Brilinta):</strong> 180 mg yuttur.</li>
+          <li><strong>Oksijen (O₂):</strong> Yalnızca SpO₂ &lt; %90 ise başla! <em>(Satürasyon normalse fazla verilen oksijen radikalleri zarar verir).</em></li>
         </ol>
 
         <div class="subhead" style="color: #854d0e; margin-top: 10px;">Kardiyocu "Yap" Derse Yapılacaklar (Onay İste):</div>
         <ol start="3">
+          <li><strong>P2Y12 İnhibitörü:</strong> Kardiyo ile görüşerek <strong>Klopidogrel (Plavix) 600 mg</strong> yuttur <em>VEYA</em> <strong>Tikagrelor (Brilinta) 180 mg</strong> yuttur.</li>
           <li><strong>Enoxaparin (Clexane):</strong> 0.5 mg/kg IV bolus <em>VEYA</em> <strong>Heparin:</strong> ~5000 Ü IV.</li>
           <li><strong>İsordil 5 mg Dilaltı:</strong> Tansiyon &lt; 110 mmHg değilse ver. 10 dk'da bir tekrarlanabilir (Max 9 tb). <br><strong style="color:red;">(II, III, aVF inferior MI'da tansiyonu çakıp arrest edebilir, sormadan verme!)</strong></li>
           <li><strong>Nitrogliserin İnfüzyon:</strong> 100 cc SF + 10 mg nitrogliserin, 6 cc/h başla.</li>
-          <li><strong>Oksijen (O₂):</strong> Hastaya başla.</li>
         </ol>
       </div>
 
@@ -344,13 +344,13 @@
 
         <p style="margin-top: 8px;"><strong>2. EKG Uyumsuz & Troponin Negatifse:</strong></p>
         <ul>
-          <li><strong>Antasit Testi:</strong> Çiğnet/içir. Ağrı geçerse gözlemle; geçmezse USAP? kabul et, taburcu etme.</li>
+        <li><strong>Antasit Yanıltmacası (DİKKAT!):</strong> Antiasit ile epigastrik ağrının geçmesi <strong>kardiyak iskemi/MI tablosunu ASLA dışlamaz!</strong> Yalancı rahatlama yaratıp atlamaya yol açabilir; şüphe varsa seri EKG ve troponin takibi şarttır.</li>
           <li><strong>Resmi Hat:</strong> Şahsi cepten arama! 112 KKM üzerinden Kardiyoloji İcapçısı ile görüş veya HBYS'den resmi konsültasyon gir.</li>
         </ul>
 
         <p style="margin-top: 8px;"><strong>3. EKG / Troponin Pozitifse (STEMI / NSTEMI):</strong></p>
         <ul>
-          <li>İlk 2 şart ilacı verip 112 KKM üzerinden sevk başlat; 3, 4, 5 ve 6. maddeler için kardiyolog onayı iste.</li>
+          <li>İlk şart ilacı verip 112 KKM üzerinden sevk başlat; 2, S3, 4, 5 ve 6. maddeler için kardiyolog onayı iste.</li>
         </ul>
       </div>
     </div>
@@ -373,9 +373,9 @@
 
         <div class="subhead" style="color: var(--red-text);">1. Hız Kırma (Hastaya Göre BİRİNİ Seç):</div>
         <ol>
-          <li>
+         <li>
             <strong>Diltiazem (Diltizem 25 mg amp) — [KOAH / Astımda İlk Tercih]:</strong><br>
-            1 ampulü 10 cc SF ile sulandır. Monitörde tansiyon izlenerek önce <strong>3 cc (7.5 mg) yavaş IV</strong> puşe yap. 10-15 dk sonra yanıt yoksa <strong>3-4 cc daha</strong> ekle. 
+            AHA kılavuzu: <strong>2 dakika boyunca 0.25 mg/kg IV bolus</strong> (ortalama erişkinde 15-20 mg). <em>Pratikte:</em> 1 ampulü 10 cc SF ile sulandır, monitörde tansiyon izlenerek 2 dakikada yavaşça ver. 15 dk sonra yanıt yoksa <strong>0.35 mg/kg</strong> (ikinci doz) uygulanabilir. 
             <br><span style="color: #b91c1c; font-weight: 600;">(Sistolik Tansiyon &lt; 100 mmHg veya EF &lt; %40 ise KONTRENDİKE!)</span>
           </li>
           <li>
@@ -749,6 +749,58 @@
         </ul>
       </div>
     </div>
+      <!-- 1. SEMPTOMATİK BRADİKARDİ KARTI -->
+    <div id="bradikardi-protokolu" class="card">
+      <div class="card-head">
+        <div>
+          <h2>SEMPTOMATİK BRADİKARDİ & AV BLOK PROTOKOLÜ</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Nabız &lt; 50/dk, Hızlı Atropin & Transkutanöz Pacing</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
+
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (FARMAKOLOJİ & AKUT MÜDAHALE)</h3>
+        
+        <div class="subhead" style="color: var(--red-text);">1. Anstabilite Bulguları Varsa (Hipotansiyon, Göğüs Ağrısı, Senkop, Şok):</div>
+        <ol>
+          <li><strong>Oksijen & Damar Yolu:</strong> Yüksek akım O₂ bağla, defibrilatör pedlerini takıp transkutanöz pacing için hazırla.</li>
+          <li>
+            <strong>Atropin (Erişkin):</strong> <strong>1 mg HIZLI IV puşe</strong> (3-5 dakikada bir tekrarlanabilir; <strong>maksimum toplam doz 3 mg</strong>).
+            <br><em>⚠️ Yavaş verme! Yavaş veya &lt; 0.5 mg verilirse paradoksal bradikardi ve arrest yapar.</em>
+          </li>
+          <li>
+            <strong>Atropin (Pediatrik):</strong> <strong>0.02 mg/kg IV hızlı</strong> (Minimum tek doz: 0.1 mg; maksimum tek doz: 0.5 mg).
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Atropine Yanıtsız / Dirençli Tablo (2. Basamak):</div>
+        <ol start="4">
+          <li><strong>Transkutanöz Pacing (TCP):</strong> Defibrilatör üzerinden hemen pacing başlat (Talep modu, 60-70/dk, elektriksel ve mekanik yakalama sağlanana kadar akım artırılır).</li>
+          <li>
+            <em>VEYA</em> <strong>Adrenalin İnfüzyonu:</strong> 2 - 10 mcg/dk IV infüzyon.
+          </li>
+          <li>
+            <em>VEYA</em> <strong>Dopamin İnfüzyonu:</strong> 5 - 20 mcg/kg/dk IV infüzyon.
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #854d0e; margin-top: 12px;">⚠️ KIRMIZI ÇİZGİLER:</div>
+        <ul style="color: #854d0e; font-size: 0.85rem;">
+          <li><strong>Mobitz Tip 2 ve Tam Blokta Atropine Güvenme:</strong> İleti his demeti altındadır; atropin yanıtsız kalır. Vakit kaybetmeden doğrudan Pacing hazırla.</li>
+          <li><strong>Asistolide Atropin VERİLMEZ:</strong> Kılavuzlardan kaldırılmıştır. Asistolide sadece CPR ve Adrenalin uygulanır.</li>
+        </ul>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: KLİNİK YÖNETİM & SEVK</h3>
+        <p><strong>1. Geri Döndürülebilir Nedenler:</strong> Hiperkalemi (Geniş QRS/sivri T varlığında Kalsiyum Glukonat ver!), Beta-bloker veya KKB intoksikasyonu, Akut İnferior MI.</p>
+        <p style="margin-top: 8px;"><strong>2. KÖTÜLEŞİRSE: 112 KKM & Anjiyo/Kardiyoloji:</strong> Pacing veya inotrop desteği eşliğinde kalıcı kalp pili için 112 KKM ile sevk edilir.</p>
+      </div>
+    </div>
+
     <!-- AORT DİSEKSİYONU KARTI -->
     <div id="aort" class="card">
       <div class="card-head">
@@ -1026,7 +1078,7 @@
           </li>
           <li>
             <strong>Antiemetik (Bulantı / Kusma):</strong>
-            <br>&bull; <strong>Metoklopramid (Metpamid 10 mg ampul):</strong> 1 ampul yavaş IV puşe (veya mayi içine).
+            <br>&bull; <strong>Metoklopramid (Metpamid 10 mg ampul):</strong> 1 ampul 100 cc SF içine).
             <br>&bull; <em>VEYA</em> <strong>Ondansetron (Zofran / Zofer 4-8 mg ampul):</strong> Dirençli kusmada 4-8 mg yavaş IV puşe.
           </li>
           <li>
@@ -1400,16 +1452,16 @@
       <div class="box-degilsen">
         <h3>EMİN DEĞİLSEN: PNÖMONİ KRİTERLERİ & SEVK</h3>
         
-        <p><strong>1. CURB-65 Pnömoni Skorlaması (Hastaneye Yatış Kriteri):</strong></p>
-        <ul>
-          <li><strong>C (Confusion):</strong> Yeni gelişen konfüzyon / bilinç değişikliği (1 puan)</li>
-          <li><strong>U (Urea):</strong> Kan üre azotu &gt; 19 mg/dL veya Üre &gt; 40 mg/dL (1 puan)</li>
-          <li><strong>R (Respiratory Rate):</strong> Solunum sayısı &ge; 30/dk (1 puan)</li>
-          <li><strong>B (Blood Pressure):</strong> Sistolik &lt; 90 mmHg veya Diyastolik &le; 60 mmHg (1 puan)</li>
-          <li><strong>65:</strong> Yaş &ge; 65 (1 puan)</li>
-          <li><em>Değerlendirme:</em> <strong>0-1 puan:</strong> Evde ayaktan tedavi edilebilir. <strong>&ge; 2 puan:</strong> Servise yatış gerekir. <strong>&ge; 3 puan:</strong> Ağır pnömoni, Yoğun Bakım yatışı açısından değerlendirilmelidir.</li>
-        </ul>
-
+      <p><strong>1. CURB-65 &amp; PSI Skorlaması (Hastaneye Yatış Kriterleri):</strong></p>
+<ul>
+  <li><strong>C (Confusion):</strong> Yeni gelişen konfüzyon / bilinç değişikliği (1 puan)</li>
+  <li><strong>U (Urea):</strong> Kan üre azotu &gt; 19 mg/dL veya Üre &gt; 40 mg/dL (1 puan)</li>
+  <li><strong>R (Respiratory Rate):</strong> Solunum sayısı &ge; 30/dk (1 puan)</li>
+  <li><strong>B (Blood Pressure):</strong> Sistolik &lt; 90 mmHg veya Diyastolik &le; 60 mmHg (1 puan)</li>
+  <li><strong>65:</strong> Yaş &ge; 65 (1 puan)</li>
+  <li><em>CURB-65 Kararı:</em> <strong>0-1 puan:</strong> Evde ayaktan tedavi. <strong>2 puan:</strong> Kısa yatış / yakın takip. <strong>&ge; 3 puan:</strong> Ağır pnömoni, yatış (YBÜ değerlendir).</li>
+  <li><em>PSI / FINE Skoru (Klinik İnci):</em> CURB-65 düşük çıksa dahi komorbiditesi (KKY, KOAH, KC/Böbrek yetmezliği, malignite) olan veya arteryel pH &lt; 7.35, Na &lt; 130, glukoz &ge; 250 olan riskli olgularda PSI Sınıf IV-V kabul edilerek <strong>doğrudan yatış kararı</strong> verilmelidir.</li>
+</ul>
         <p style="margin-top: 8px;"><strong>2. Kırmızı Bayraklar:</strong></p>
         <ul>
           <li>Oda havasında SpO₂ &lt; %92, hemodinamik instabilite, hemoptizi, plevral efüzyon veya multilober infiltrasyon varlığında ayaktan tedavi denenmez.</li>
@@ -1629,58 +1681,7 @@
         </ul>
       </div>
     </div>
-    <!-- 1. SEMPTOMATİK BRADİKARDİ KARTI -->
-    <div id="bradikardi-protokolu" class="card">
-      <div class="card-head">
-        <div>
-          <h2>SEMPTOMATİK BRADİKARDİ & AV BLOK PROTOKOLÜ</h2>
-          <div style="font-size: 0.8rem; color: var(--text-sub);">Nabız &lt; 50/dk, Hızlı Atropin & Transkutanöz Pacing</div>
-        </div>
-        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
-      </div>
-
-      <!-- EMİN'SEN -->
-      <div class="box-emin">
-        <h3>EMİN'SEN: (FARMAKOLOJİ & AKUT MÜDAHALE)</h3>
-        
-        <div class="subhead" style="color: var(--red-text);">1. Anstabilite Bulguları Varsa (Hipotansiyon, Göğüs Ağrısı, Senkop, Şok):</div>
-        <ol>
-          <li><strong>Oksijen & Damar Yolu:</strong> Yüksek akım O₂ bağla, defibrilatör pedlerini takıp transkutanöz pacing için hazırla.</li>
-          <li>
-            <strong>Atropin (Erişkin):</strong> <strong>1 mg HIZLI IV puşe</strong> (3-5 dakikada bir tekrarlanabilir; <strong>maksimum toplam doz 3 mg</strong>).
-            <br><em>⚠️ Yavaş verme! Yavaş veya &lt; 0.5 mg verilirse paradoksal bradikardi ve arrest yapar.</em>
-          </li>
-          <li>
-            <strong>Atropin (Pediatrik):</strong> <strong>0.02 mg/kg IV hızlı</strong> (Minimum tek doz: 0.1 mg; maksimum tek doz: 0.5 mg).
-          </li>
-        </ol>
-
-        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Atropine Yanıtsız / Dirençli Tablo (2. Basamak):</div>
-        <ol start="4">
-          <li><strong>Transkutanöz Pacing (TCP):</strong> Defibrilatör üzerinden hemen pacing başlat (Talep modu, 60-70/dk, elektriksel ve mekanik yakalama sağlanana kadar akım artırılır).</li>
-          <li>
-            <em>VEYA</em> <strong>Adrenalin İnfüzyonu:</strong> 2 - 10 mcg/dk IV infüzyon.
-          </li>
-          <li>
-            <em>VEYA</em> <strong>Dopamin İnfüzyonu:</strong> 5 - 20 mcg/kg/dk IV infüzyon.
-          </li>
-        </ol>
-
-        <div class="subhead" style="color: #854d0e; margin-top: 12px;">⚠️ KIRMIZI ÇİZGİLER:</div>
-        <ul style="color: #854d0e; font-size: 0.85rem;">
-          <li><strong>Mobitz Tip 2 ve Tam Blokta Atropine Güvenme:</strong> İleti his demeti altındadır; atropin yanıtsız kalır. Vakit kaybetmeden doğrudan Pacing hazırla.</li>
-          <li><strong>Asistolide Atropin VERİLMEZ:</strong> Kılavuzlardan kaldırılmıştır. Asistolide sadece CPR ve Adrenalin uygulanır.</li>
-        </ul>
-      </div>
-
-      <!-- EMİN DEĞİLSEN -->
-      <div class="box-degilsen">
-        <h3>EMİN DEĞİLSEN: KLİNİK YÖNETİM & SEVK</h3>
-        <p><strong>1. Geri Döndürülebilir Nedenler:</strong> Hiperkalemi (Geniş QRS/sivri T varlığında Kalsiyum Glukonat ver!), Beta-bloker veya KKB intoksikasyonu, Akut İnferior MI.</p>
-        <p style="margin-top: 8px;"><strong>2. KÖTÜLEŞİRSE: 112 KKM & Anjiyo/Kardiyoloji:</strong> Pacing veya inotrop desteği eşliğinde kalıcı kalp pili için 112 KKM ile sevk edilir.</p>
-      </div>
-    </div>
-
+  
 
     <!-- 2. ORGANOFOSFAT TOKSİSİTESİ KARTI -->
     <div id="organofosfat-protokolu" class="card">
@@ -1816,85 +1817,92 @@
       </div>
     </div>
     <!-- İDRAR YOLU ENFEKSİYONLARI (İYE) KARTI -->
-    <div id="iye-protokolu" class="card">
-      <div class="card-head">
-        <div>
-          <h2>İDRAR YOLU ENFEKSİYONLARI (Sistit & Piyelonefrit)</h2>
-          <div style="font-size: 0.8rem; color: var(--text-sub);">Basit Sistit, Akut Piyelonefrit & Pediatrik Doz Rehberi</div>
-        </div>
-        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
-      </div>
-
-      <!-- EMİN'SEN -->
-      <div class="box-emin">
-        <h3>EMİN'SEN: (AKILCI REÇETE & FARMAKOLOJİ)</h3>
-        
-        <div class="subhead" style="color: var(--red-text);">1. Erişkin Akut Basit Sistit (Yalnızca Tek Bir Ajan Seçilir!):</div>
-        <ol>
-          <li>
-            <strong>İlk Tercih: Fosfomisin (Monurol 3g şase):</strong><br>
-            <strong>Tek doz 1 şase.</strong> Gece yatmadan önce, mesane boşaltıldıktan sonra 1 bardak suda eritilip içilir (Mesanede gece boyu kalması sağlanır).
-          </li>
-          <li>
-            <em>VEYA</em> <strong>Nitrofurantoin (Piyeloseptyl 100 mg kapsül):</strong><br>
-            <strong>2x1 tok</strong> (5 gün). <em>(⚠️ GFR &lt; 30 ml/dk olan yaşlı/böbrek hastasına ve piyelonefrite verilmez!).</em>
-          </li>
-          <li>
-            <em>Semptomatik Destek:</em> Dizüri/yanma şiddetliyse fenazopiridin türevi veya parasetamol + Bol hidrasyon (2.5 - 3 L su/gün).
-          </li>
-        </ol>
-
-        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Akut Komplike İYE & Piyelonefrit (Ateş, Yan Ağrısı, KVA Hassasiyeti):</div>
-        <ol start="4">
-          <li>
-            <strong>Ayaktan Tedavi (Genel Durumu İyi Olguda):</strong><br>
-            &bull; <strong>Siprofloksasin (Cipro 500 mg tb):</strong> <strong>2x1 tok</strong> (7 gün).<br>
-            &bull; <em>VEYA</em> <strong>Sefuroksim aksetil (Aksef / Zinnat 500 mg tb):</strong> 2x1 (10-14 gün).
-          </li>
-          <li>
-            <strong>Yatarak / Acil Parenteral Başlangıç:</strong><br>
-            <strong>Seftriakson (Rocephin / Unacefin 1 g flakon):</strong> 1x1-2 g IV/IM yavaş infüzyon.
-          </li>
-        </ol>
-
-        <div class="subhead" style="color: #374151; margin-top: 12px;">3. Pediatrik İYE Tedavisi:</div>
-        <ol start="6">
-          <li>
-            <strong>Sefuroksim aksetil (Zinnat 125 mg / 250 mg süspansiyon):</strong><br>
-            &bull; <strong>Doz:</strong> <strong>20 - 30 mg/kg/gün</strong> (2 eşit doza bölünerek 7-10 gün).<br>
-            &bull; <em>Pratik:</em> 2 yaş altı 125 mg formdan kiloya göre 2x1; 2-12 yaş 250 mg formdan kiloya göre 2x1 ölçek.<br>
-            &bull; <em>Alternatif:</em> Amoksisilin-Klavulanat (Klavunat / Augmentin BID) 40-50 mg/kg/gün (2 dozda).
-          </li>
-        </ol>
-
-        <div class="subhead" style="color: #854d0e; margin-top: 12px;">⚠️ KIRMIZI ÇİZGİLER (POLİFARMASİ & TUZAKLAR):</div>
-        <ul style="color: #854d0e; font-size: 0.85rem;">
-          <li><strong>Sistitte Antibiyotik Kokteyli Yapma:</strong> Monurol + Cipro + Piyeloseptyl aynı anda reçete edilmez; bu polifarmasidir. Sadece biri seçilir.</li>
-          <li><strong>Piyelonefritte Piyeloseptyl / Monurol İŞE YARAMAZ:</strong> Bu ilaçlar böbrek dokusuna geçmez; üst üriner sistem enfeksiyonunda Cipro veya Seftriakson/Aksef seçilmelidir.</li>
-        </ul>
-      </div>
-
-      <!-- EMİN DEĞİLSEN -->
-      <div class="box-degilsen">
-        <h3>EMİN DEĞİLSEN: ÜROSEPSİS & SEVK KRİTERLERİ</h3>
-        
-        <p><strong>1. Semptomsuz Bakteriüri Tuzağı:</strong></p>
-        <ul>
-          <li>İdrar tahlilinde lökosit ve bakteri var ama hastanın hiçbir şikayeti (yanma, sık çıkma, ateş) yoksa: <strong>Gebelere ve ürolojik girişim yapılacaklara tedavi verilir; yaşlı ve diyabetik asemptomatik hastaya antibiyotik VERİLMEZ!</strong></li>
-        </ul>
-
-        <p style="margin-top: 8px;"><strong>2. Pediatrik Kırmızı Bayraklar:</strong></p>
-        <ul>
-          <li><strong>&lt; 2-3 Ay İnfant:</strong> Ateş ve İYE saptanan küçük bebekler ürosepsis ve VUR riski nedeniyle ayaktan tedavi edilmez; <strong>hastaneye yatırılmalıdır</strong>.</li>
-          <li>Tekrarlayan pediatrik İYE'ler altta yatan Vezikoüreteral Reflü (VUR) ve böbrek skarlaşması açısından Çocuk Nefroloji / Ürolojiye yönlendirilmelidir.</li>
-        </ul>
-
-        <p style="margin-top: 8px;"><strong>3. KÖTÜLEŞİRSE: 112 KKM & Üroloji / Dahiliye Sevki:</strong></p>
-        <ul>
-          <li>Oral alamayan, inatçı kusan, hipotansif (Sepsis/Ürosepsis kuşkusu), anürik veya taş/tıkanıklık zemininde gelişen piyelonefrit olguları ilk doz Seftriakson 1-2 g IV yapılarak acilen <strong>Üroloji / Yoğun Bakım</strong> olan merkeze sevk edilir.</li>
-        </ul>
-      </div>
+<div id="iye-protokolu" class="card">
+  <div class="card-head">
+    <div>
+      <h2>İDRAR YOLU ENFEKSİYONLARI (Sistit & Piyelonefrit)</h2>
+      <div style="font-size: 0.8rem; color: var(--text-sub);">Basit Sistit, Akut Piyelonefrit & Pediatrik Doz Rehberi</div>
     </div>
+    <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+  </div>
+
+  <!-- EMİN'SEN -->
+  <div class="box-emin">
+    <h3>EMİN'SEN: (AKILCI REÇETE & FARMAKOLOJİ)</h3>
+    
+    <div class="subhead" style="color: var(--red-text);">1. Erişkin Akut Basit Sistit & Cinsiyete Göre Yaklaşım:</div>
+    <ol>
+      <li>
+        <strong>Kadın Hastada Basamak Tedavisi:</strong><br>
+        &bull; <em>1. Basamak:</em> <strong>Fosfomisin (Monurol 3g şase):</strong> Tek doz. Gece yatmadan önce mesane boşken 1 bardak suda eritilip içilir.<br>
+        &bull; <em>2. Basamak (Şikayet sebat ederse):</em> <strong>Nitrofurantoin (Piyeloseptyl 100 mg kapsül):</strong> 2x1 tok (5 gün) + Bol hidrasyon (2.5 - 3 L su/gün). <em>(⚠️ GFR &lt; 30 ml/dk olan yaşlı/böbrek hastasına ve piyelonefrite verilmez!).</em><br>
+        &bull; <em>Dirençli / Nüks Olgular:</em> Tedaviye rağmen yanıt alınamıyorsa, <strong>TİT normal çıksa dahi</strong> interstisyel sistit, taş veya ürolojik patoloji açısından <strong>poliklinikten Ürolojiye yönlendir</strong>.
+      </li>
+      <li>
+        <strong>Erkek Hastada Yaklaşım (DİKKAT!):</strong><br>
+        &bull; <strong>Erkekte Fosfomisin (Monurol) reçete edilmez</strong> <em>(Yalnızca prostat biyopsisi profilaksisinde ödenir; erkekte sistit için SUT ödemez ve endikasyon dışıdır)</em>.<br>
+        &bull; Sık tekrarlayan İYE öyküsü olan erkekte profilaktik amaçla <strong>Metenamin mandelat (Hippurin 1 g tb) 2x1</strong> değerlendirilebilir.
+      </li>
+      <li>
+        <em>Semptomatik Destek:</em> Fenazopiridin türevleri pratikte önerilmez; semptom kontrolü için <strong>bol hidrasyon + Parasetamol</strong> yeterlidir.
+      </li>
+    </ol>
+
+    <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Akut Komplike İYE & Piyelonefrit (Ateş, Yan Ağrısı, KVAH (+), Yüksek CRP):</div>
+    <ol start="4">
+      <li>
+        <strong>Öncelik Üroloji Görüşü & Yatış:</strong> Ateş + KVAH (+) + Yüksek CRP tablosunda altta yatan <strong>üretra/üreter taşı (obstrüktif üropati) olasılığı yüksektir</strong>. Öncelik <strong>Üroloji konsültasyonu</strong> ve yatış endikasyonunun değerlendirilmesidir.
+      </li>
+      <li>
+        <strong>Ayaktan Oral Tedavi (Genel durumu iyi, yatış verilmeyen olguda):</strong><br>
+        &bull; <em>İlk Tercih:</em> <strong>Oral 3. Kuşak Sefalosporin (Sefiksim - Suprax 400 mg tb):</strong> <strong>1x1</strong> (7-10 gün). Bu tabloda Cipro sıklıkla dirençli kalır.<br>
+        &bull; <em>Alternatif:</em> <strong>Sefuroksim aksetil (Aksef 500 mg tb) 2x1</strong> VEYA <strong>Siprofloksasin (Cipro 500 mg tb) 2x1</strong> <em>(⚠️ DİKKAT: Cipro'ya Avrupa/EMA tarafından ciddi güvenlik kısıtlamaları getirilmiştir; direnç riski yüksektir ve <strong>18 yaş altına KESİNLİKLE önerilmez!</strong>).</em>
+      </li>
+      <li>
+        <strong>Yatarak / Acil Parenteral Başlangıç:</strong><br>
+        <strong>Seftriakson (Rocephin / Unacefin 1 g flakon):</strong> 1x1-2 g IV yavaş infüzyon.
+      </li>
+    </ol>
+
+    <div class="subhead" style="color: #374151; margin-top: 12px;">3. Pediatrik İYE Tedavisi:</div>
+    <ol start="7">
+      <li>
+        <strong>Sefalosporin Grubu (İlk Tercih - Doz Ayarına Dikkat!):</strong><br>
+        &bull; <strong>Sefuroksim aksetil (Zinnat 125 mg / 250 mg süspansiyon):</strong> <strong>20 - 30 mg/kg/gün</strong> (2 eşit doza bölünerek 7-10 gün).<br>
+        &bull; <em>Pratik:</em> 2 yaş altı 125 mg formdan kiloya göre 2x1; 2-12 yaş 250 mg formdan kiloya göre 2x1 ölçek.<br>
+        &bull; <em>Alternatif:</em> Amoksisilin-Klavulanat (Klavunat / Augmentin BID) 40-50 mg/kg/gün (2 dozda). Florokinolonlar (Cipro) çocukta kontrendikedir!
+      </li>
+    </ol>
+
+    <div class="subhead" style="color: #854d0e; margin-top: 12px;">⚠️ KIRMIZI ÇİZGİLER (POLİFARMASİ & TUZAKLAR):</div>
+    <ul style="color: #854d0e; font-size: 0.85rem;">
+      <li><strong>Sistitte Antibiyotik Kokteyli Yapma:</strong> Monurol + Cipro + Piyeloseptyl aynı anda reçete edilmez; polifarmasidir. Sadece biri seçilir.</li>
+      <li><strong>Piyelonefritte Piyeloseptyl / Monurol İŞE YARAMAZ:</strong> Böbrek parankimine geçmezler; üst üriner sistem enfeksiyonunda oral 3. kuşak sefalosporin veya parenteral Seftriakson seçilmelidir.</li>
+      <li><strong>Erkekte Monurol Ödenmez:</strong> Erkek hastaya sistit tanısıyla Monurol yazılırsa SGK/SUT kesintisi uygulanır.</li>
+    </ul>
+  </div>
+
+  <!-- EMİN DEĞİLSEN -->
+  <div class="box-degilsen">
+    <h3>EMİN DEĞİLSEN: ÜROSEPSİS & SEVK KRİTERLERİ</h3>
+    
+    <p><strong>1. Semptomsuz Bakteriüri Tuzağı:</strong></p>
+    <ul>
+      <li>İdrar tahlilinde lökosit ve bakteri var ama hastanın hiçbir şikayeti (yanma, sık çıkma, ateş) yoksa: <strong>Gebelere ve ürolojik girişim yapılacaklara tedavi verilir; yaşlı ve diyabetik asemptomatik hastaya antibiyotik VERİLMEZ!</strong></li>
+    </ul>
+
+    <p style="margin-top: 8px;"><strong>2. Pediatrik Kırmızı Bayraklar:</strong></p>
+    <ul>
+      <li><strong>&lt; 2-3 Ay İnfant:</strong> Ateş ve İYE saptanan küçük bebekler ürosepsis ve VUR riski nedeniyle ayaktan tedavi edilmez; <strong>hastaneye yatırılmalıdır</strong>.</li>
+      <li>Tekrarlayan pediatrik İYE'ler altta yatan Vezikoüreteral Reflü (VUR) ve böbrek skarlaşması açısından Çocuk Nefroloji / Ürolojiye yönlendirilmelidir.</li>
+    </ul>
+
+    <p style="margin-top: 8px;"><strong>3. KÖTÜLEŞİRSE: 112 KKM &amp; Üroloji / Dahiliye Sevki:</strong></p>
+    <ul>
+      <li>Oral alamayan, inatçı kusan, hipotansif (Sepsis/Ürosepsis kuşkusu), anürik veya taş/tıkanıklık zemininde gelişen piyelonefrit olguları ilk doz Seftriakson 1-2 g IV yapılarak acilen <strong>Üroloji / Yoğun Bakım</strong> olan merkeze sevk edilir.</li>
+    </ul>
+  </div>
+</div>
     <!-- KONSTİPASYON, GAZ & DİSPEPSİ KARTI -->
     <div id="konstipasyon-protokolu" class="card">
       <div class="card-head">
@@ -2466,38 +2474,37 @@
       </div>
     </div>
 
-    <!-- 3. GÖZ TRAVMALARI & KAYNAK IŞIĞI PROTOKOLÜ -->
-    <div id="goz-travma-protokolu" class="card">
-      <div class="card-head">
-        <div>
-          <h2>GÖZDE YABANCI CİSİM & KAYNAK ALMASI (Fotokeratit)</h2>
-          <div style="font-size: 0.8rem; color: var(--text-sub);">Yüzeyel Yabancı Cisim Çıkarma, Fotokeratit & Kornea Koruması</div>
-        </div>
-        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+  <!-- 3. GÖZ TRAVMALARI & KAYNAK IŞIĞI PROTOKOLÜ -->
+  <div id="goz-travma-protokolu" class="card">
+    <div class="card-head">
+      <div>
+        <h2>GÖZDE YABANCI CİSİM &amp; KAYNAK ALMASI (Fotokeratit)</h2>
+        <div style="font-size: 0.8rem; color: var(--text-sub);">Yabancı Cisim Yaklaşımı, Fotokeratit &amp; Kornea Koruması</div>
       </div>
-      <div class="box-emin">
-        <h3>EMİN'SEN: (GİRİŞİM & REÇETE)</h3>
-        <div class="subhead" style="color: var(--red-text);">1. Kornea/Konjonktivada Yüzeyel Yabancı Cisim:</div>
-        <ol>
-          <li><strong>Anestezi:</strong> Proparakain (Alcaine %0.5) 1 damla damlat (Yalnızca acilde tanı/müdahale için; <strong>hastaya ASLA reçete edilmez!</strong>).</li>
-          <li><strong>Çıkarma:</strong> Bol SF ile yıka; çıkmazsa ıslak pamuklu çubuk veya ince enjektör ucuyla nazikçe sıyır.</li>
-          <li><strong>Taburculuk Reçetesi:</strong> Tobramisin damla (Tobrased %0.3) 4x1 + Basitrasin/Neomisin pomad (Thiocilline göz pomadı) gece 1x1 (5 gün). Gözü kapatma!</li>
-        </ol>
-        <div class="subhead" style="color: #1e3a8a; margin-top: 8px;">2. Kaynak Işığı Teması (Fotokeratit):</div>
-        <ol start="4">
-          <li><strong>Siklopejik Damla:</strong> Siklopentolat (Sikloplejin %1) acilde 1 damla (Ağrılı siliyer spazmı anında çözer; fotofobi yapacağı söylenmelidir).</li>
-          <li><strong>Reçete:</strong> Oksitetrasiklin pomad (Terramycin göz merhemi) 2-3x1 + Suni gözyaşı damlası + Sistemik oral NSAİİ (Arveles 25 mg 2x1).</li>
-        </ol>
-      </div>
-      <div class="box-degilsen">
-        <h3>EMİN DEĞİLSEN: PENETRAN TRAVMA & ÖLÜMCÜL DAMLA HATASI</h3>
-        <ul>
-          <li><strong>ÖLÜMCÜL KURAL: Alcaine / Lokal Anestezik Damla REÇETE EDİLMEZ!</strong> Hasta evde damlatırsa kornea epitelini eritir ve kalıcı kornea perforasyonuna (körlüğe) yol açar.</li>
-          <li><strong>Açık Küre / Penetran Travma (GÖZE DOKUNMA!):</strong> Yabancı cisim sklera/korneayı delmişse veya pupil armut şeklini almışsa (Seidel testi +): <strong>Göze bası yapma, yıkama, pomad sürme!</strong> Sert koruyucu kapak/karton bardakla kapat, diğer gözü de senkron hareketi önlemek için kapat ve acil Göz Cerrahisine sevk et.</li>
-        </ul>
-      </div>
+      <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
     </div>
-
+    <div class="box-emin">
+      <h3>EMİN'SEN: (KLİNİK YÖNETİM &amp; REÇETE)</h3>
+      <div class="subhead" style="color: var(--red-text);">1. Kornea / Konjonktiva Yabancı Cisim &amp; Keratit Riski:</div>
+      <ol>
+        <li><strong>Girişimden Kaçın:</strong> Enjektör ucu, iğne veya pamuklu çubukla cismi <strong>çıkarmaya/kazımaya ÇALIŞMA!</strong> <em>(Korneal hasar ve keratit gelişirse doğrudan malpraktise girer).</em></li>
+        <li><strong>İlk Müdahale:</strong> Gözü yalnızca bol SF ile nazikçe yıka; çıkmıyorsa dokunma.</li>
+        <li><strong>Yönetim &amp; Yönlendirme:</strong> Göz hekimi varsa <strong>acil Göz konsültasyonu</strong> iste. Göz hekimi yoksa profilaktik <strong>antibiyotikli göz merhemi</strong> (Terramycin pomad) veya <strong>Tobramisin damla</strong> (%0.3) başla, gözü kapatma ve hastayı vakit kaybetmeden <strong>en yakın göz hekimine yönlendir</strong>.</li>
+      </ol>
+      <div class="subhead" style="color: #1e3a8a; margin-top: 8px;">2. Kaynak Işığı Teması (Fotokeratit):</div>
+      <ol start="4">
+        <li><strong>Siklopejik Damla:</strong> Siklopentolat (Sikloplejin %1) acilde 1 damla (Ağrılı siliyer spazmı anında çözer; fotofobi yapacağı söylenmelidir).</li>
+        <li><strong>Reçete:</strong> Oksitetrasiklin pomad (Terramycin göz merhemi) 2-3x1 + Suni gözyaşı damlası + Sistemik oral NSAİİ (Arveles 25 mg 2x1).</li>
+      </ol>
+    </div>
+    <div class="box-degilsen">
+      <h3>EMİN DEĞİLSEN: PENETRAN TRAVMA &amp; ÖLÜMCÜL DAMLA HATASI</h3>
+      <ul>
+        <li><strong>ÖLÜMCÜL KURAL: Alcaine / Lokal Anestezik Damla REÇETE EDİLMEZ!</strong> Hasta evde damlatırsa kornea epitelini eritir ve kalıcı kornea perforasyonuna (körlüğe) yol açar.</li>
+        <li><strong>Açık Küre / Penetran Travma (GÖZE DOKUNMA!):</strong> Yabancı cisim sklera/korneayı delmişse veya pupil armut şeklini almışsa (Seidel testi +): <strong>Göze bası yapma, yıkama, pomad sürme!</strong> Sert koruyucu kapak/karton bardakla kapat, diğer gözü de senkron hareketi önlemek için kapat ve acil Göz Cerrahisine sevk et.</li>
+      </ul>
+    </div>
+  </div>
     <!-- 4. TANSİYON PNÖMOTORAKS KARTI (ACİL RESÜSİTASYON) -->
     <div id="tansiyon-pnomotoraks" class="card">
       <div class="card-head">
@@ -3304,18 +3311,19 @@
     <div id="renal-kolik" class="card">
       <div class="card-head">
         <div>
-          <h2>RENAL KOLİK, GLOB VEZİKAL & SONDA YÖNETİMİ</h2>
-          <div style="font-size: 0.8rem; color: var(--text-sub);">Analjezi, Gebelik Güvenliği, Taş Tıkanması & Güvenli Foley Kateter</div>
+          <h2>RENAL KOLİK, GLOB VEZİKAL &amp; SONDA YÖNETİMİ</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">Analjezi, Böbrek Fonksiyonu Koruması, Taş Tıkanması &amp; Güvenli Foley Kateter</div>
         </div>
         <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
       </div>
       <div class="box-emin">
-        <h3>EMİN'SEN: (ANALJEZİ, DÜŞÜRME & GLOB MÜDAHALESİ)</h3>
+        <h3>EMİN'SEN: (ANALJEZİ, DÜŞÜRME &amp; GLOB MÜDAHALESİ)</h3>
         <ol>
           <li>
-            <strong>Standart Ağrı Kesici (NSAİİ 1. Tercihtir):</strong><br>
+            <strong>Standart Ağrı Kesici (NSAİİ 1. Tercihtir - Böbrek Fonksiyonuna Dikkat!):</strong><br>
             &bull; <strong>Diklofenak (Dikloron 75 mg ampul) IM</strong> veya <strong>Deksketoprofen (Arveles 50 mg) IV</strong> infüzyon.<br>
-            &bull; <em>Dirençli vakada:</em> 100 cc SF içine Buscopan 1 amp + Contramal (Tramadol) 50-100 mg yavaş infüzyon.
+            &bull; <em>Dirençli vakada:</em> 100 cc SF içine Contramal (Tramadol) 50-100 mg yavaş infüzyon. <em>(Spazmolitiklerin / Buscopan'ın taş düşürmeye kanıtlanmış bir faydası yoktur; rutin verilmez).</em><br>
+            &bull; <em>⚠️ Kreatinin &amp; ABY Tuzağı:</em> Kreatinin yüksekliği olan veya sınırda seyreden hastalarda acilde tek doz yapılsa dahi <strong>ev reçetesine bol NSAİİ yazmaktan kesinlikle kaçınılmalıdır!</strong> İpin ucu kaçarsa akut böbrek yetmezliği (ABY) derinleşir; taburculuk analjezisinde Parasetamol tercih edilmelidir.
           </li>
           <li>
             <strong>GEBEDE TAŞ ANALJEZİSİ (HAYATİ KURAL):</strong><br>
@@ -3324,27 +3332,26 @@
           </li>
           <li>
             <strong>Distal Üreter Taşı Düşürme Reçetesi (5-10 mm):</strong><br>
-            &bull; <strong>Tamsulosin (Tamidra MR 0.4 mg) 1x1</strong> gece (Üreter alt ucunu gevşetir) + Arveles 25 mg tb 2x1 tok + Bol hidrasyon (günde 2.5-3 L su).
+            &bull; <strong>Tamsulosin (Tamidra MR 0.4 mg) 1x1</strong> gece (Üreter alt ucunu gevşetir) + Bol hidrasyon (günde 2.5-3 L su). Ağrı için kreatinin normalse kısa süreli NSAİİ, yüksekse Parasetamol.
           </li>
           <li>
-            <strong>Taş Üretrayı Tıkadı & GLOB VEZİKAL Olduysa (İdrar Çıkışı Sıfır, Mesane Şiş):</strong><br>
-            &bull; Üretraya bol miktarda <strong>kayganlaştırıcı/lokal anestezikli jel (Cathejell / K-Y)</strong> sıkılır ve 2-3 dakika beklenir.<br>
+            <strong>Taş Üretrayı Tıkadı &amp; GLOB VEZİKAL Olduysa (İdrar Çıkışı Sıfır, Mesane Şiş):</strong><br>
+            &bull; Üretraya bol miktarda <strong>kayganlaştırıcı/lokal anestezikli jel (Cathejell / K-Y)</strong> sıkılır; beklemeye gerek kalmadan doğrudan sonda denenebilir.<br>
             &bull; Uygun boy (14-16 Fr) yumuşak Foley sonda son derece nazikçe itilir. Taş mesaneye doğru hafifçe itilip idrar akışı sağlanabilir.<br>
-            &bull; <em>Dekompresyon Kuralı:</em> Masif dolu mesane boşaltılırken ilk etapta <strong>500-750 cc boşaltılıp klemplenir</strong>, 15 dk beklenerek kademeli boşaltılır (ani tam dekompresyonda 'ex vacuo' masif hematüriyi önlemek için!).
+            &bull; <em>Dekompresyon Kuralı:</em> Masif dolu mesane boşaltılırken pratikte ilk etapta <strong>400-500 cc boşaldıktan sonra 15 dk klemplenir</strong>, ardından kademeli boşaltılır (ani tam dekompresyonda hipotansiyon ve 'ex vacuo' masif hematüriyi önlemek için!).
           </li>
         </ol>
       </div>
       <div class="box-degilsen">
-        <h3>EMİN DEĞİLSEN: SONDA TAKILMAYACAK HALLER & ÜROSEPSİS</h3>
+        <h3>EMİN DEĞİLSEN: SONDA TAKILMAYACAK HALLER &amp; ÜROSEPSİS</h3>
         <ul>
           <li><strong>⚠️ SONDA İTERKEN DİRENÇ VARSA ASLA ZORLAMA:</strong> Taş kanala sıkışmışsa zorlamak üretrayı deler (rüptür), yalancı kanal açar ve kalıcı darlık bırakır! Zorlama, derhal Üroloji konsültasyonu iste veya gerekirse suprapubik ponksiyon planla.</li>
-          <li><strong>⚠️ MEATUS KANAMASINDA SONDA YASAKTIR:</strong> Penil uçta/meatusda kan sızıntısı veya perineal hematom varsa üretra yırtılmıştır; <strong>SONDA KESİNLİKLE TAKILMAZ!</strong></li>
+          <li><strong>⚠️ TRAVMAYA SEKONDER MEATUS KANAMASINDA SONDA YASAKTIR:</strong> Pelvik travma veya perineye darbe sonrası penil uçta/meatusda kan sızıntısı ya da hematom varsa üretra rüptürü kuşkusuyla <strong>sonda KESİNLİKLE takılmaz!</strong> <em>(Medikal piyelonefrit/taş kaynaklı spontan hematüride ise sonda takılması kontrendike değildir).</em></li>
           <li><strong>TAŞ + ATEŞ (&ge; 38°C) = ÜROSEPSİS ACİLİ:</strong> Tıkanmış böbrek arkasındaki idrar enfektedir. Bu hasta asla reçeteyle evine gönderilemez; acil Double-J stent veya Perkütan Nefrostomi ile drenaj yapılmazsa hasta septik şoktan ölür!</li>
           <li><strong>Rebound Varsa Taş Değildir:</strong> Taş kıvrandırır ama karında tahta gibi sertlik veya rebound yapmaz. Rebound varsa Akut Batın (Apandisit, Aort Disseksiyonu/Rüptürü, Dış Gebelik) düşünülmelidir.</li>
         </ul>
       </div>
     </div>
-
    <!-- 2. GENEL ZEHİRLENMELER & DEKONTAMİNASYON (SADE & NET) -->
     <div id="akut-zehirlenme-dekontaminasyon" class="card">
       <div class="card-head">
@@ -4582,7 +4589,7 @@
         <ol start="5">
           <li>
             <strong>Metoklopramid (Metpamid 10 mg / 2 ml Ampul):</strong><br>
-            &bull; Erişkinde 1 ampul (10 mg) IM veya yavaş IV (maks 30 mg/gün). &lt; 1 yaş kontrendikedir. Böbrek yetmezliğinde %50 doz azaltılır.<br>
+            &bull; Erişkinde 1 ampul (10 mg) IM veya 100 cc SF içinde (maks 30 mg/gün). &lt; 1 yaş kontrendikedir. Böbrek yetmezliğinde %50 doz azaltılır.<br>
             &bull; <em>Distoni Yan Etkisi:</em> Çene kilitlenmesi veya boyun kasılması yaparsa antidotu Avil veya Akineton'dur.
           </li>
           <li>
@@ -4771,12 +4778,12 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
       </div>
     </div>
 <!-- TEŞEKKÜR VE KATKIDA BULUNANLAR -->
-      <div style="background: #f8fafc; border-left: 4px solid #64748b; padding: 12px 14px; border-radius: 4px; margin-top: 14px;">
-        <h4 style="margin: 0 0 6px 0; color: #334155; font-size: 0.95rem;">🤝 Teşekkür & Katkıda Bulunanlar</h4>
-        <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">
-          Klinik protokollerin olgunlaşmasında, sahadaki pratik yaklaşımların doğrulanmasında ve rehberlerin hazırlanma sürecindeki kıymetli fikir ve katkılarından ötürü meslektaşlarım; <strong>Dr. Muhsin Kefçi</strong>, <strong>Dr. Necdet Özcan</strong>, <strong>Dr. Furkan Büyükçapar</strong> ve <strong>Dr. Ahmet Akif Okuyucu</strong>'ya içtenlikle teşekkür ederim.
-        </p>
-      </div>
+  <div style="background: #f8fafc; border-left: 4px solid #64748b; padding: 12px 14px; border-radius: 4px; margin-top: 20px;">
+    <h4 style="margin: 0 0 6px 0; color: #334155; font-size: 0.95rem;">🤝 Teşekkür & Katkıda Bulunanlar</h4>
+    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">
+      Klinik protokollerin olgunlaşmasında, sahadaki pratik yaklaşımların doğrulanmasında ve rehberlerin hazırlanma sürecindeki kıymetli fikir ve katkılarından ötürü Dr. Muhsin Kefçi, Dr. Necdet Özcan, Dr. Furkan Büyükçapar, Dr. Ahmet Akif Okuyucu ve Dr. Yunus Emre Tüzün'e teşekkürlerimi sunarım.
+    </p>
+  </div>
   </div>
 </div>
 <script>

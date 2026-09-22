@@ -4697,7 +4697,7 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
   <div style="background: #ffffff; max-width: 600px; width: 92%; border-radius: 12px; padding: 28px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 1px solid #e2e8f0; position: relative; box-sizing: border-box; display: block; text-align: left;">
     
     <!-- Kapatma Çarpısı -->
-    <span onclick="toggleModal(false)" style="position: absolute; top: 16px; right: 20px; font-size: 1.5rem; font-weight: bold; color: #64748b; cursor: pointer; line-height: 1;">&times;</span>
+    <span onclick="document.getElementById('cvModal').style.display='none'" style="position: absolute; top: 16px; right: 20px; font-size: 1.5rem; font-weight: bold; color: #64748b; cursor: pointer; line-height: 1;">&times;</span>
 
     <h3 style="margin: 0 0 16px 0; color: #0f172a; font-size: 1.25rem; font-weight: 700; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">
       Dr. Muhammed Emin Dalseçkin
@@ -4716,6 +4716,9 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
         Sitedeki tüm rehberler meslektaşlarım için tamamen ücretsizdir.
       </p>
     </div>
+  </div> <!-- CV iç kart bitişi -->
+</div> <!-- cvModal BİTİŞİ -->
+
 <!-- GENÇ MESLEKTAŞLARIMA ÖNERİLER MODAL -->
 <div id="onerilerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(4px); z-index: 999999; align-items: center; justify-content: center;">
   <div style="background: #ffffff; max-width: 680px; width: 92%; max-height: 88vh; border-radius: 12px; padding: 26px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 1px solid #e2e8f0; position: relative; box-sizing: border-box; display: flex; flex-direction: column;">
@@ -4772,7 +4775,7 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
         <em>Yolunuz açık, nöbetleriniz sakin, kararlarınız isabetli olsun.</em>
       </div>
 
-      <!-- TEŞEKKÜR VE KATKIDA BULUNANLAR (KAYDIRILABİLİR ALANIN EN ALTINDA) -->
+      <!-- TEŞEKKÜR VE KATKIDA BULUNANLAR -->
       <div style="background: #f8fafc; border-left: 4px solid #64748b; padding: 12px 14px; border-radius: 4px; margin-top: 16px; margin-bottom: 8px;">
         <h4 style="margin: 0 0 6px 0; color: #334155; font-size: 0.95rem;">🤝 Teşekkür &amp; Katkıda Bulunanlar</h4>
         <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">
@@ -4782,14 +4785,8 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
 
     </div> <!-- overflow-y: auto BİTİŞİ -->
 
-  </div> <!-- modal card BİTİŞİ -->
+  </div> <!-- onerilerModal iç kart bitişi -->
 </div> <!-- onerilerModal BİTİŞİ -->
-  </div>
-</div>
-</p>
-  </div>
-</div>
-</div>
 <script>
   function toggleModal(show) {
     document.getElementById('cvModal').style.display = show ? 'flex' : 'none';

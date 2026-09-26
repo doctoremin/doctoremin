@@ -232,6 +232,7 @@
       <li><a href="#pediatrik-usye">Pediatrik ÜSYE, Krup & Ateş</a></li>
 <li><a href="#pediatrik-nobet">Pediatrik Nöbet & Febril Konvülsiyon</a></li>
       <li><a href="#status-epileptikus">Status Epileptikus (Erişkin & Pediatrik)</a></li>
+      <li><a href="#akut-noroloji-tia-inme">Akut Nörolojik Aciller: TİA, İnme &amp; Konversiyon Ayrımı</a></li>
       <li><a href="#eriskin-solunum">Erişkin ÜSYE, Bronşit & Pnömoni</a></li>
       <li><a href="#yanik-protokolu">Yanık Yönetimi & Pansuman</a></li>
       <li><a href="#dka-protokolu">Diyabetik Ketoasidoz (DKA)</a></li>
@@ -1380,10 +1381,84 @@
         </ul>
       </div>
     </div>
+    <!-- AKUT NÖROLOJİ: TİA, İNME & KONVERSİYON KARTI -->
+    <div id="akut-noroloji-inme-tia" class="card">
+      <div class="card-head">
+        <div>
+          <h2>AKUT NÖROLOJİK ACİLLER (TİA, İnme &amp; Konversiyon)</h2>
+          <div style="font-size: 0.8rem; color: var(--text-sub);">ABCD² Skoru, Görüntüleme Protokolü, Resmi Sevk &amp; Organik Ayrımı</div>
+        </div>
+        <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
+      </div>
+
+      <!-- EMİN'SEN -->
+      <div class="box-emin">
+        <h3>EMİN'SEN: (TİA, GÖRÜNTÜLEME &amp; İNME PROTOKOLÜ)</h3>
+
+        <div class="subhead" style="color: var(--red-text);">1. TİA mı, İnme mi? (ABCD² Skoru ile Karar Ver):</div>
+        <p>Hasta fokal kayıpla gelip acilde tamamen düzelse bile ilk 48 saatte büyük inme riski taşır:</p>
+        <ol>
+          <li><strong>A (Age / Yaş):</strong> &ge; 60 yaş &rarr; 1 puan</li>
+          <li><strong>B (Blood Pressure / Tansiyon):</strong> İlk ölçümde Sistolik &ge; 140 veya Diastolik &ge; 90 mmHg &rarr; 1 puan</li>
+          <li><strong>C (Clinical / Klinik):</strong> Tek taraflı motor güçsüzlük &rarr; 2 puan | Güçsüzlük olmaksızın sadece konuşma bozukluğu &rarr; 1 puan</li>
+          <li><strong>D (Duration / Süre):</strong> &ge; 60 dk &rarr; 2 puan | 10-59 dk &rarr; 1 puan | &lt; 10 dk &rarr; 0 puan</li>
+          <li><strong>D (Diabetes / Diyabet):</strong> DM varlığı &rarr; 1 puan</li>
+        </ol>
+        <p style="margin-top: 6px;">
+          <em>⚠️ Karar:</em> <strong>&ge; 4 puan yüksek risktir.</strong> "Düzeldi" denilip taburcu edilmez; acil Nöroloji konsültasyonu açılır, yatırılarak etiyolojik inceleme (karotis USG, EKO, ritim holter) planlanır.
+        </p>
+
+        <div class="subhead" style="color: #1e3a8a; margin-top: 12px;">2. Görüntüleme Protokolü (Ne Lazım?):</div>
+        <ol start="6">
+          <li><strong>Kontrastsız Beyin BT + Difüzyon MR (Birlikte İste):</strong> Nativ BT kanamayı dışlar (ilk saatlerde iskemiyi göstermez). Difüzyon MR (DWI) erken iskemiyi dakikalar içinde gösteren altın standarttır.</li>
+          <li><strong>Difüzyon MR Yoksa:</strong> Nativ BT ile kanama dışlanır. Klinik oturuyorsa ve stroke şüphesi yüksekse hasta vakit kaybetmeden MR olan merkeze yönlendirilir.</li>
+          <li><strong>İlk 2 Dakika (Taklitçileri Ele):</strong> <strong>Parmak ucu kan şekeri (ZORUNLU)</strong> bakılmadan inme tanısı konulamaz! Nöbet / Todd parezisi öyküsü (dil ısırığı, idrar kaçırma) mutlaka sorgulanmalıdır.</li>
+        </ol>
+
+        <div class="subhead" style="color: #374151; margin-top: 12px;">3. Trombolitik &amp; Resmi Konsültasyon / Sevk Ağı:</div>
+        <ol start="9">
+          <li><strong>Önce danış!:</strong> Acil serviste tek başımıza IV trombolitik vermiyoruz; hastayı hazırlayıp Nörolojiye bağlıyoruz, süreci ve sevki nörolog yönlendirir.</li>
+          <li><strong>Resmi Yol:</strong> Son normal görülme saati &le; 4.5 saat (Trombolitik) veya &le; 24 saat (Trombektomi adayı) ise:
+            <br>&bull; <em>Hastanede Nörolog Varsa:</em> Acil resmi konsültasyon açılır.
+            <br>&bull; <em>Hastanede Nörolog Yoksa:</em> <strong>112 Komuta Kontrol Merkezi aranır, 112 üzerinden ildeki nöbetçi Nöroloji uzmanına resmi hattan bağlanılır.</strong> Uygunluk kararı alınır ve sevk 112 ile organize edilir.
+          </li>
+        </ol>
+
+        <div class="subhead" style="color: #374151; margin-top: 12px;">4. Organik İnme vs. Konversiyon (Yatak Başı İpuçları):</div>
+        <ol start="11">
+          <li><strong>Klinik Geliş:</strong> Gerçek inmede vasküler risk faktörleri (HT, AF, ileri yaş) ve net anatomik kayıp vardır. Konversiyon sıklıkla ani tartışma/stres sonrası panikleyen aile eşliğinde tepkisiz yatışla gelir.</li>
+          <li><strong>Yüz &amp; Duyu:</strong> İnmede alın kırışır, ağız sağlam tarafa kayar (santral fasial parezi). Konversiyonda yüz simetriktir; en tipik bulgu <em>göz kapaklarını muayeneye karşı sımsıkı yumma</em> ve sternum ortasında bıçakla kesilmiş gibi duyu kaybı tarifidir.</li>
+          <li><strong>Hoover Testi:</strong> Hasta sırtüstü yatarken hekim ellerini topukların altına koyar. Sağlam bacağını kaldırması istendiğinde felçli bacağın topuğu hekimin elini istemsizce aşağı bastırıyorsa motor yol sağlamdır (konversiyon).</li>
+          <li><strong>Düşen Kol Testi:</strong> Paretik kol yüzün üzerine kaldırılıp serbest bırakılır. Gerçek felçte kol yüze çarpar; konversiyonda kol yüzü korumak için yana kayar.</li>
+        </ol>
+      </div>
+
+      <!-- EMİN DEĞİLSEN -->
+      <div class="box-degilsen">
+        <h3>EMİN DEĞİLSEN: KIRMIZI ÇİZGİLER &amp; SEVK</h3>
+
+        <p><strong>1. Şüphe Varsa Her Zaman İnme Kabul Et:</strong></p>
+        <ul>
+          <li>Konversiyon bir dışlama tanısıdır. "Tartışmış, canı sıkılmış" diyerek görüntüleme yapmamak genç inme ve karotis diseksiyonlarını atlamanın ana nedenidir. Tereddüt anında hasta iskemik inme gibi yönetilir (Nativ BT + Difüzyon MR).</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>2. İlaç ve Tansiyon Tuzakları:</strong></p>
+        <ul>
+          <li><strong>Görüntüleme Çıkmadan İlaç YASAKTIR:</strong> Kanamayı (SAB / İKK) dışlamadan hastaya kesinlikle Aspirin, Plavix veya DMAH başlanmaz.</li>
+          <li><strong>Tansiyona Dokunma:</strong> İskemik inmede tansiyonu hızla düşürmek perfüzyonu bozar; sistolik &gt; 220 veya diastolik &gt; 120 mmHg aşılmadıkça acilde tansiyon düşürülmez.</li>
+        </ul>
+
+        <p style="margin-top: 8px;"><strong>3. Resmi Sevk Kriterleri:</strong></p>
+        <ul>
+          <li>Difüzyon MR imkânı bulunmayan, ABCD² skoru &ge; 4 olan veya son 24 saat içinde semptomu başlayıp akut infarkt saptanan olgular 112 resmi konsültasyon kanalıyla derhal sevk edilir.</li>
+        </ul>
+      </div>
+    </div>
     <!-- ERİŞKİN ÜSYE, BRONŞİT & PNÖMONİ KARTI -->
     <div id="eriskin-solunum" class="card">
       <div class="card-head">
         <div>
+          
           <h2>ERİŞKİN ÜSYE, BRONŞİT & PNÖMONİ PROTOKOLÜ</h2>
           <div style="font-size: 0.8rem; color: var(--text-sub);">Enfeksiyon Ayrımı, Öksürük Tedavisi & Akılcı Antibiyoterapi</div>
         </div>

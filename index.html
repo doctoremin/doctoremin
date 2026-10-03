@@ -4965,91 +4965,114 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
 </div> <!-- onerilerModal BİTİŞİ -->
 <script>
   function toggleModal(show) {
-    document.getElementById('cvModal').style.display = show ? 'flex' : 'none';
+    var m = document.getElementById('cvModal');
+    if (m) m.style.display = show ? 'flex' : 'none';
   }
 
-function highlightText(element, query) {
-    element.querySelectorAll('mark.search-highlight').forEach(mark => {
-      const parent = mark.parentNode;
-      parent.replaceChild(document.createTextNode(mark.textContent), mark);
-      parent.normalize();
+  function highlightText(element, query) {
+    if (!element) return;
+
+    // 1. Önceki tüm sarı vurguları temizle
+    var marks = element.querySelectorAll('mark.search-highlight');
+    marks.forEach(function(m) {
+      var parent = m.parentNode;
+      if (parent) {
+        parent.replaceChild(document.createTextNode(m.textContent), m);
+        parent.normalize();
+      }
     });
 
-    if (!query) return;
+    if (!query || query.length < 2) return;
 
-    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
-    const textNodes = [];
+    // 2. Metin düğümlerini topla
+    var walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+    var textNodes = [];
     while (walker.nextNode()) {
-      if (walker.currentNode.nodeValue.trim() !== '') {
+      if (walker.currentNode.nodeValue.trim().length > 0) {
         textNodes.push(walker.currentNode);
       }
     }
 
-    textNodes.forEach(node => {
-      const text = node.nodeValue;
-      const lowerText = text.toLocaleLowerCase('tr');
-      const index = lowerText.indexOf(query);
+    // 3. Eşleşen kelimeleri sarı mark içine al
+    textNodes.forEach(function(node) {
+      var text = node.nodeValue;
+      var lower = text.toLocaleLowerCase('tr');
+      var matchPos = lower.indexOf(query);
 
-      if (index !== -1) {
-        const span = document.createElement('span');
-        let remainingText = text;
-        let remainingLower = lowerText;
+      if (matchPos !== -1) {
+        var frag = document.createDocumentFragment();
+        var curText = text;
+        var curLower = lower;
 
         while (true) {
-          const matchIndex = remainingLower.indexOf(query);
-          if (matchIndex === -1) {
-            span.appendChild(document.createTextNode(remainingText));
+          var idx = curLower.indexOf(query);
+          if (idx === -1) {
+            frag.appendChild(document.createTextNode(curText));
             break;
           }
 
-          span.appendChild(document.createTextNode(remainingText.substring(0, matchIndex)));
+          if (idx > 0) {
+            frag.appendChild(document.createTextNode(curText.substring(0, idx)));
+          }
 
-          const mark = document.createElement('mark');
+          var mark = document.createElement('mark');
           mark.className = 'search-highlight';
           mark.style.backgroundColor = '#ffeb3b';
           mark.style.color = '#000';
+          mark.style.fontWeight = 'bold';
           mark.style.padding = '0 2px';
-          mark.style.borderRadius = '3px';
-          mark.textContent = remainingText.substring(matchIndex, matchIndex + query.length);
-          span.appendChild(mark);
+          mark.style.borderRadius = '2px';
+          mark.textContent = curText.substring(idx, idx + query.length);
+          frag.appendChild(mark);
 
-          remainingText = remainingText.substring(matchIndex + query.length);
-          remainingLower = remainingLower.substring(matchIndex + query.length);
+          curText = curText.substring(idx + query.length);
+          curLower = curLower.substring(idx + query.length);
         }
 
-        node.parentNode.replaceChild(span, node);
+        if (node.parentNode) {
+          node.parentNode.replaceChild(frag, node);
+        }
       }
     });
   }
 
   function filterMenu() {
-    const q = document.getElementById('sidebarSearch').value.toLocaleLowerCase('tr').trim();
-    const items = document.querySelectorAll('#protocolList li');
+    try {
+      var inputEl = document.getElementById('sidebarSearch');
+      if (!inputEl) return;
+      var q = inputEl.value.toLocaleLowerCase('tr').trim();
+      var items = document.querySelectorAll('#protocolList li');
 
-    items.forEach(li => {
-      const a = li.querySelector('a');
-      const href = a ? a.getAttribute('href') : null;
-      let cardText = '';
-      let cardElement = null;
+      items.forEach(function(li) {
+        var a = li.querySelector('a');
+        var card = null;
 
-      if (href && href.startsWith('#')) {
-        cardElement = document.querySelector(href);
-        if (cardElement) {
-          highlightText(cardElement, q);
-          cardText = cardElement.innerText.toLocaleLowerCase('tr');
+        if (a) {
+          var href = a.getAttribute('href') || '';
+          if (href.startsWith('#') && href.length > 1) {
+            var targetId = href.substring(1);
+            card = document.getElementById(targetId);
+          }
         }
-      }
 
-      const titleText = li.innerText.toLocaleLowerCase('tr');
-      const isMatch = q === '' || titleText.includes(q) || cardText.includes(q);
+        var cardText = '';
+        if (card) {
+          highlightText(card, q);
+          cardText = card.innerText.toLocaleLowerCase('tr');
+        }
 
-      li.style.display = isMatch ? 'block' : 'none';
+        var titleText = li.innerText.toLocaleLowerCase('tr');
+        var isMatch = (q === '') || titleText.includes(q) || cardText.includes(q);
 
-      if (cardElement) {
-        cardElement.style.display = isMatch ? '' : 'none';
-      }
-    });
+        li.style.display = isMatch ? 'block' : 'none';
+        if (card) {
+          card.style.display = isMatch ? '' : 'none';
+        }
+      });
+    } catch (err) {
+      console.error('Arama hatası:', err);
+    }
   }
-
+</script>
 </body>
 </html>

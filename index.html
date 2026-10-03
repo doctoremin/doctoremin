@@ -4968,11 +4968,33 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
     document.getElementById('cvModal').style.display = show ? 'flex' : 'none';
   }
 
-  function filterMenu() {
-    const q = document.getElementById('sidebarSearch').value.toLowerCase();
+ function filterMenu() {
+    const q = document.getElementById('sidebarSearch').value.toLocaleLowerCase('tr').trim();
     const items = document.querySelectorAll('#protocolList li');
+
     items.forEach(li => {
-      li.style.display = li.innerText.toLowerCase().includes(q) ? 'block' : 'none';
+      const a = li.querySelector('a');
+      const href = a ? a.getAttribute('href') : null;
+      let cardText = '';
+
+      if (href && href.startsWith('#')) {
+        const card = document.querySelector(href);
+        if (card) {
+          cardText = card.innerText.toLocaleLowerCase('tr');
+        }
+      }
+
+      const titleText = li.innerText.toLocaleLowerCase('tr');
+      const isMatch = q === '' || titleText.includes(q) || cardText.includes(q);
+
+      li.style.display = isMatch ? 'block' : 'none';
+
+      if (href && href.startsWith('#')) {
+        const card = document.querySelector(href);
+        if (card) {
+          card.style.display = isMatch ? '' : 'none';
+        }
+      }
     });
   }
 </script>

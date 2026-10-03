@@ -4968,7 +4968,61 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
     document.getElementById('cvModal').style.display = show ? 'flex' : 'none';
   }
 
- function filterMenu() {
+function highlightText(element, query) {
+    element.querySelectorAll('mark.search-highlight').forEach(mark => {
+      const parent = mark.parentNode;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    });
+
+    if (!query) return;
+
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+    const textNodes = [];
+    while (walker.nextNode()) {
+      if (walker.currentNode.nodeValue.trim() !== '') {
+        textNodes.push(walker.currentNode);
+      }
+    }
+
+    textNodes.forEach(node => {
+      const text = node.nodeValue;
+      const lowerText = text.toLocaleLowerCase('tr');
+      const index = lowerText.indexOf(query);
+
+      if (index !== -1) {
+        const span = document.createElement('span');
+        let remainingText = text;
+        let remainingLower = lowerText;
+
+        while (true) {
+          const matchIndex = remainingLower.indexOf(query);
+          if (matchIndex === -1) {
+            span.appendChild(document.createTextNode(remainingText));
+            break;
+          }
+
+          span.appendChild(document.createTextNode(remainingText.substring(0, matchIndex)));
+
+          const mark = document.createElement('mark');
+          mark.className = 'search-highlight';
+          mark.style.backgroundColor = '#ffeb3b';
+          mark.style.color = '#000';
+          mark.style.padding = '0 2px';
+          mark.style.borderRadius = '3px';
+          mark.textContent = remainingText.substring(matchIndex, matchIndex + query.length);
+          span.appendChild(mark);
+
+          remainingText = remainingText.substring(matchIndex + query.length);
+          remainingLower = remainingLower.substring(matchIndex + query.length);
+        }
+
+        node.parentNode.replaceChild(span, node);
+      }
+    });
+  }
+
+  function filterMenu() {
     const q = document.getElementById('sidebarSearch').value.toLocaleLowerCase('tr').trim();
     const items = document.querySelectorAll('#protocolList li');
 
@@ -4976,11 +5030,13 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
       const a = li.querySelector('a');
       const href = a ? a.getAttribute('href') : null;
       let cardText = '';
+      let cardElement = null;
 
       if (href && href.startsWith('#')) {
-        const card = document.querySelector(href);
-        if (card) {
-          cardText = card.innerText.toLocaleLowerCase('tr');
+        cardElement = document.querySelector(href);
+        if (cardElement) {
+          highlightText(cardElement, q);
+          cardText = cardElement.innerText.toLocaleLowerCase('tr');
         }
       }
 
@@ -4989,15 +5045,11 @@ Hastaya ve yakınına; göğüs ağrısı, nefes darlığı, tek taraflı uyuşm
 
       li.style.display = isMatch ? 'block' : 'none';
 
-      if (href && href.startsWith('#')) {
-        const card = document.querySelector(href);
-        if (card) {
-          card.style.display = isMatch ? '' : 'none';
-        }
+      if (cardElement) {
+        cardElement.style.display = isMatch ? '' : 'none';
       }
     });
   }
-</script>
 
 </body>
 </html>

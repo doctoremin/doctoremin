@@ -81,7 +81,7 @@ var eminIndexLoading = false;
 function loadSearchIndex(done) {
   if (eminIndex || eminIndexLoading) return;
   eminIndexLoading = true;
-  fetch('/assets/search-index.json')
+  fetch('/search-index.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       eminIndex = {};

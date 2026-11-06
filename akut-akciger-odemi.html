@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTS7S530NS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,11 +21,20 @@
   <meta property="og:title" content="Akut Akciğer Ödemi (Kalp Yetersizliği) | Doctor Emin">
   <meta property="og:description" content="Akut Akciğer Ödemi (Kalp Yetersizliği). Kardiyojenik Şok vs. Akut Dekompanse KY, Diüretik &amp; Vazodilatasyon. Hekimler için acil ve klinik protokol.">
   <meta property="og:url" content="https://doctoremin.com/akut-akciger-odemi">
-  <link rel="stylesheet" href="/style.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Akut Akciğer Ödemi (Kalp Yetersizliği)", "description": "Akut Akciğer Ödemi (Kalp Yetersizliği). Kardiyojenik Şok vs. Akut Dekompanse KY, Diüretik & Vazodilatasyon. Hekimler için acil ve klinik protokol.", "url": "https://doctoremin.com/akut-akciger-odemi", "inLanguage": "tr", "dateModified": "2026-11-05", "audience": {"@type": "MedicalAudience", "audienceType": "Clinician"}, "author": {"@type": "Person", "name": "Emin Dalseçkin", "honorificPrefix": "Dr."}, "isPartOf": {"@type": "WebSite", "name": "Doctor Emin", "alternateName": "Acil & Klinik Protokoller", "url": "https://doctoremin.com/", "inLanguage": "tr"}}</script>
+  <meta property="og:image" content="https://doctoremin.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b5f8a">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css?v=e3f3d283">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Akut Akciğer Ödemi (Kalp Yetersizliği)", "description": "Akut Akciğer Ödemi (Kalp Yetersizliği). Kardiyojenik Şok vs. Akut Dekompanse KY, Diüretik & Vazodilatasyon. Hekimler için acil ve klinik protokol.", "url": "https://doctoremin.com/akut-akciger-odemi", "inLanguage": "tr", "dateModified": "2026-11-05", "audience": {"@type": "MedicalAudience", "audienceType": "Clinician"}, "author": {"@type": "Person", "name": "Emin Dalseçkin", "honorificPrefix": "Dr."}, "image": "https://doctoremin.com/og-image.png", "isPartOf": {"@type": "WebSite", "name": "Doctor Emin", "alternateName": "Acil & Klinik Protokoller", "url": "https://doctoremin.com/", "inLanguage": "tr"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://doctoremin.com/"}, {"@type": "ListItem", "position": 2, "name": "Akut Akciğer Ödemi (Kalp Yetersizliği)", "item": "https://doctoremin.com/akut-akciger-odemi"}]}</script>
 </head>
 <body>
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
 <!-- === HUKUKİ KORUMA MODAL BAŞLANGICI === -->
 <div id="legalModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); z-index: 999999; align-items: center; justify-content: center; font-family: sans-serif;">
   <div style="background: #ffffff; max-width: 580px; width: 92%; border-radius: 10px; padding: 22px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.4); border: 2px solid #cbd5e1; box-sizing: border-box;">
@@ -67,197 +76,205 @@
 <!-- === HUKUKİ KORUMA MODAL BİTİŞİ === -->
 
 <div class="layout">
-  <!-- SOL LİSTE & CV BUTONU -->
   <aside>
     <a href="/" class="brand">DOCTOR<span>EMİN</span></a>
-    
-    <button class="btn-cv" onclick="toggleModal(true)"> 👨‍⚕️ Dr. Emin Dalseçkin (Hakkımda) </button>
-  <button class="btn-cv" onclick="document.getElementById('onerilerModal').style.display='flex'" style="margin-top: 6px; background: #f8fafc; border-color: #cbd5e1; color: #1e3a8a; cursor: pointer;">💡 Genç Meslektaşlarıma Öneriler & İletişim</button>
-    
-    <input type="text" class="search-input" id="sidebarSearch" placeholder="Tanı / ilaç ara..." oninput="filterMenu()">
-    
+
+    <div class="side-actions">
+      <button type="button" class="btn-cv" onclick="toggleModal(true)">👨‍⚕️ Dr. Emin Dalseçkin (Hakkımda)</button>
+      <button type="button" class="btn-cv btn-oneri" onclick="openOneriler()">💡 Genç Meslektaşlarıma Öneriler &amp; İletişim</button>
+      <a class="btn-cv btn-pdf" href="/tum-protokoller">📥 Tüm Rehberi PDF İndir (WP Paylaşım)</a>
+    </div>
+
+    <input type="text" class="search-input" id="sidebarSearch" placeholder="Tanı / ilaç ara..." aria-label="Tanı veya ilaç ara" autocomplete="off" oninput="filterMenu()">
+
     <button type="button" class="list-toggle" aria-expanded="false" aria-controls="protocolList">Tanı Listesi ▾</button>
-    <div class="list-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-sub); text-transform: uppercase;">Tanı Listesi</div>
+    <div class="list-label">Tanı Listesi</div>
     <ul class="protocol-nav" id="protocolList">
       <li class="nav-section nav-kritik" data-group>
-        <span class="nav-section-label">Kritik Aciller (Erişkin + Pediatrik)</span>
-        <ul>
-          <li data-slug="kardiyak-arrest-cpr"><a href="/kardiyak-arrest-cpr">Kardiyak Arrest & CPR (VF / Asistoli)</a></li>
-          <li data-slug="anafilaksi"><a href="/anafilaksi">Anafilaksi (Erişkin & Pediatrik)</a></li>
-          <li data-slug="miyokard-enfarktusu"><a href="/miyokard-enfarktusu">Miyokard Enfarktüsü (MI)</a></li>
-          <li data-slug="ventrikuler-tasikardi"><a href="/ventrikuler-tasikardi">Ventriküler Taşikardi (Nabızlı VT)</a></li>
-          <li data-slug="supraventrikuler-tasikardi"><a href="/supraventrikuler-tasikardi">Supraventriküler Taşikardi (SVT)</a></li>
-          <li data-slug="bradikardi-av-blok"><a href="/bradikardi-av-blok">Semptomatik Bradikardi & AV Blok</a></li>
-          <li data-slug="aort-diseksiyonu"><a href="/aort-diseksiyonu">Aort Diseksiyonu</a></li>
-          <li data-slug="pulmoner-emboli"><a href="/pulmoner-emboli">Akut Pulmoner Emboli (PTE)</a></li>
-          <li data-slug="akut-akciger-odemi"><a href="/akut-akciger-odemi" class="active" aria-current="page">Akut Akciğer Ödemi (Kalp Yetersizliği)</a></li>
-          <li data-slug="tansiyon-pnomotoraks"><a href="/tansiyon-pnomotoraks">Tansiyon Pnömotoraks (Acil Dekompresyon)</a></li>
-          <li data-slug="astim-koah-atak"><a href="/astim-koah-atak">Astım & KOAH Atak (Erişkin & Pediatrik)</a></li>
-          <li data-slug="status-epileptikus"><a href="/status-epileptikus">Status Epileptikus (Erişkin & Pediatrik)</a></li>
-          <li data-slug="inme-tia-konversiyon"><a href="/inme-tia-konversiyon">Akut Nörolojik Aciller (TİA, İnme &amp; Konversiyon)</a></li>
-          <li data-slug="akut-bakteriyel-menenjit"><a href="/akut-bakteriyel-menenjit">Akut Bakteriyel Menenjit</a></li>
-          <li data-slug="diyabetik-ketoasidoz"><a href="/diyabetik-ketoasidoz">Diyabetik Ketoasidoz (DKA)</a></li>
-          <li data-slug="hipoglisemi"><a href="/hipoglisemi">Hipoglisemi Yönetimi</a></li>
-          <li data-slug="elektrolit-acilleri"><a href="/elektrolit-acilleri">Elektrolit Acilleri (K⁺ & Na⁺)</a></li>
-          <li data-slug="zehirlenme-dekontaminasyon"><a href="/zehirlenme-dekontaminasyon">Zehirlenmeler & Gastrik Dekontaminasyon</a></li>
-          <li data-slug="preeklampsi-eklampsi"><a href="/preeklampsi-eklampsi">Preeklampsi & Eklampsi (Gebelikte Nöbet/HT)</a></li>
-          <li data-slug="ozofagus-varis-kanamasi"><a href="/ozofagus-varis-kanamasi">Özofagus Varis Kanaması</a></li>
-        </ul>
-      </li>
-      <li class="nav-section nav-pediatri" data-group>
-        <span class="nav-section-label">Pediatri</span>
-        <ul>
-          <li data-slug="pediatrik-akut-gastroenterit"><a href="/pediatrik-akut-gastroenterit">Pediatrik AGE (Kusma, İshal & Sıvı)</a></li>
-          <li data-slug="pediatrik-usye-krup-ates"><a href="/pediatrik-usye-krup-ates">Pediatrik ÜSYE, Krup & Ateş</a></li>
-          <li data-slug="pediatrik-nobet-febril-konvulsiyon"><a href="/pediatrik-nobet-febril-konvulsiyon">Pediatrik Nöbet & Febril Konvülsiyon</a></li>
-          <li data-slug="pediatrik-alerji-urtiker"><a href="/pediatrik-alerji-urtiker">Pediatrik Alerji &amp; Atopi</a></li>
-          <li data-slug="pediatrik-dokuntulu-hastaliklar"><a href="/pediatrik-dokuntulu-hastaliklar">Pediatrik Döküntülü Hastalıklar</a></li>
-          <li data-slug="pisik-diaper-dermatit"><a href="/pisik-diaper-dermatit">Diaper Dermatit (Pişik) & Kandida</a></li>
-          <li data-slug="anafilaksi"><a href="/anafilaksi">Anafilaksi (Erişkin & Pediatrik)</a></li>
-          <li data-slug="astim-koah-atak"><a href="/astim-koah-atak">Astım & KOAH Atak (Erişkin & Pediatrik)</a></li>
-          <li data-slug="status-epileptikus"><a href="/status-epileptikus">Status Epileptikus (Erişkin & Pediatrik)</a></li>
-          <li data-slug="konjonktivit"><a href="/konjonktivit">Konjonktivit & Pediatrik Göz</a></li>
-        </ul>
-      </li>
-      <li class="nav-section nav-eriskin" data-group>
-        <span class="nav-section-label">Erişkin</span>
+        <span class="nav-section-label">Kritik Aciller (Erişkin)</span>
         <ul>
           <li class="nav-group" data-group>
-            <span class="nav-group-label">Resüsitasyon &amp; Kardiyoloji</span>
+            <span class="nav-group-label">Resüsitasyon &amp; Şok</span>
             <ul>
-              <li data-slug="kardiyak-arrest-cpr"><a href="/kardiyak-arrest-cpr">Kardiyak Arrest & CPR (VF / Asistoli)</a></li>
-              <li data-slug="miyokard-enfarktusu"><a href="/miyokard-enfarktusu">Miyokard Enfarktüsü (MI)</a></li>
-              <li data-slug="angina-pektoris"><a href="/angina-pektoris">Angina Pektoris (Göğüs Ağrısı)</a></li>
-              <li data-slug="atriyal-fibrilasyon"><a href="/atriyal-fibrilasyon">Atriyal Fibrilasyon (AF / RVR)</a></li>
-              <li data-slug="supraventrikuler-tasikardi"><a href="/supraventrikuler-tasikardi">Supraventriküler Taşikardi (SVT)</a></li>
-              <li data-slug="ventrikuler-tasikardi"><a href="/ventrikuler-tasikardi">Ventriküler Taşikardi (Nabızlı VT)</a></li>
-              <li data-slug="bradikardi-av-blok"><a href="/bradikardi-av-blok">Semptomatik Bradikardi & AV Blok</a></li>
-              <li data-slug="aort-diseksiyonu"><a href="/aort-diseksiyonu">Aort Diseksiyonu</a></li>
-              <li data-slug="hipertansif-kriz"><a href="/hipertansif-kriz">Hipertansif Kriz (Emergency vs. Urgency)</a></li>
+              <li data-slug="anafilaksi"><a href="/anafilaksi">Anafilaksi (Erişkin &amp; Pediatrik)</a></li>
+              <li data-slug="kardiyak-arrest-cpr"><a href="/kardiyak-arrest-cpr">Kardiyak Arrest &amp; CPR (VF / Asistoli)</a></li>
+              <li data-slug="noradrenalin-infuzyonu"><a href="/noradrenalin-infuzyonu">Noradrenalin (Steradin) İnfüzyonu</a></li>
+            </ul>
+          </li>
+          <li class="nav-group" data-group>
+            <span class="nav-group-label">Kardiyoloji</span>
+            <ul>
               <li data-slug="akut-akciger-odemi"><a href="/akut-akciger-odemi" class="active" aria-current="page">Akut Akciğer Ödemi (Kalp Yetersizliği)</a></li>
               <li data-slug="pulmoner-emboli"><a href="/pulmoner-emboli">Akut Pulmoner Emboli (PTE)</a></li>
-              <li data-slug="noradrenalin-infuzyonu"><a href="/noradrenalin-infuzyonu">Noradrenalin (Steradin) İnfüzyonu</a></li>
+              <li data-slug="angina-pektoris"><a href="/angina-pektoris">Angina Pektoris (Göğüs Ağrısı)</a></li>
+              <li data-slug="aort-diseksiyonu"><a href="/aort-diseksiyonu">Aort Diseksiyonu</a></li>
+              <li data-slug="atriyal-fibrilasyon"><a href="/atriyal-fibrilasyon">Atriyal Fibrilasyon (AF / RVR)</a></li>
+              <li data-slug="hipertansif-kriz"><a href="/hipertansif-kriz">Hipertansif Kriz (Emergency vs. Urgency)</a></li>
+              <li data-slug="miyokard-enfarktusu"><a href="/miyokard-enfarktusu">Miyokard Enfarktüsü (MI)</a></li>
+              <li data-slug="bradikardi-av-blok"><a href="/bradikardi-av-blok">Semptomatik Bradikardi &amp; AV Blok</a></li>
+              <li data-slug="supraventrikuler-tasikardi"><a href="/supraventrikuler-tasikardi">Supraventriküler Taşikardi (SVT)</a></li>
+              <li data-slug="ventrikuler-tasikardi"><a href="/ventrikuler-tasikardi">Ventriküler Taşikardi (Nabızlı VT)</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
             <span class="nav-group-label">Solunum</span>
             <ul>
-              <li data-slug="astim-koah-atak"><a href="/astim-koah-atak">Astım & KOAH Atak (Erişkin & Pediatrik)</a></li>
-              <li data-slug="eriskin-usye-bronsit-pnomoni"><a href="/eriskin-usye-bronsit-pnomoni">Erişkin ÜSYE, Bronşit & Pnömoni</a></li>
+              <li data-slug="astim-koah-atak"><a href="/astim-koah-atak">Astım &amp; KOAH Atak (Erişkin &amp; Pediatrik)</a></li>
               <li data-slug="tansiyon-pnomotoraks"><a href="/tansiyon-pnomotoraks">Tansiyon Pnömotoraks (Acil Dekompresyon)</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
             <span class="nav-group-label">Nöroloji</span>
             <ul>
-              <li data-slug="inme-tia-konversiyon"><a href="/inme-tia-konversiyon">Akut Nörolojik Aciller (TİA, İnme &amp; Konversiyon)</a></li>
-              <li data-slug="status-epileptikus"><a href="/status-epileptikus">Status Epileptikus (Erişkin & Pediatrik)</a></li>
               <li data-slug="akut-bakteriyel-menenjit"><a href="/akut-bakteriyel-menenjit">Akut Bakteriyel Menenjit</a></li>
-              <li data-slug="kafa-ici-basinc-artisi"><a href="/kafa-ici-basinc-artisi">KİBAS (Kafa İçi Basınç Artışı)</a></li>
-              <li data-slug="bas-agrisi-migren"><a href="/bas-agrisi-migren">Akut Baş Ağrısı & Migren Krizi</a></li>
-              <li data-slug="vertigo-hints"><a href="/vertigo-hints">Periferik Vertigo & HINTS Ayrımı</a></li>
-              <li data-slug="bell-paralizisi"><a href="/bell-paralizisi">Bell Paralizisi (Fasyal Felç)</a></li>
+              <li data-slug="inme-tia-konversiyon"><a href="/inme-tia-konversiyon">Akut Nörolojik Aciller (TİA, İnme &amp; Konversiyon)</a></li>
+              <li data-slug="status-epileptikus"><a href="/status-epileptikus">Status Epileptikus (Erişkin &amp; Pediatrik)</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
-            <span class="nav-group-label">Metabolik Aciller &amp; Zehirlenmeler</span>
+            <span class="nav-group-label">Metabolik &amp; Zehirlenme</span>
             <ul>
+              <li data-slug="bilinc-degisikligi-doz-asimi"><a href="/bilinc-degisikligi-doz-asimi">Bilinç Değişikliği &amp; Narkotik Doz Aşımı</a></li>
               <li data-slug="diyabetik-ketoasidoz"><a href="/diyabetik-ketoasidoz">Diyabetik Ketoasidoz (DKA)</a></li>
+              <li data-slug="elektrolit-acilleri"><a href="/elektrolit-acilleri">Elektrolit Acilleri (K⁺ &amp; Na⁺)</a></li>
               <li data-slug="hipoglisemi"><a href="/hipoglisemi">Hipoglisemi Yönetimi</a></li>
-              <li data-slug="elektrolit-acilleri"><a href="/elektrolit-acilleri">Elektrolit Acilleri (K⁺ & Na⁺)</a></li>
-              <li data-slug="metabolik-asidoz"><a href="/metabolik-asidoz">Metabolik Asidoz & Bikarbonat</a></li>
-              <li data-slug="zehirlenme-dekontaminasyon"><a href="/zehirlenme-dekontaminasyon">Zehirlenmeler & Gastrik Dekontaminasyon</a></li>
+              <li data-slug="metabolik-asidoz"><a href="/metabolik-asidoz">Metabolik Asidoz &amp; Bikarbonat</a></li>
               <li data-slug="organofosfat-zehirlenmesi"><a href="/organofosfat-zehirlenmesi">Organofosfat (Kolinerjik) Toksisitesi</a></li>
-              <li data-slug="bilinc-degisikligi-doz-asimi"><a href="/bilinc-degisikligi-doz-asimi">Bilinç Değişikliği & Narkotik Doz Aşımı</a></li>
+              <li data-slug="zehirlenme-dekontaminasyon"><a href="/zehirlenme-dekontaminasyon">Zehirlenmeler &amp; Gastrik Dekontaminasyon</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
-            <span class="nav-group-label">Alerji, Isırık &amp; Yanık</span>
+            <span class="nav-group-label">Gebelik &amp; Kanama</span>
             <ul>
-              <li data-slug="anafilaksi"><a href="/anafilaksi">Anafilaksi (Erişkin & Pediatrik)</a></li>
-              <li data-slug="eriskin-urtiker-alerji"><a href="/eriskin-urtiker-alerji">Erişkin Akut Ürtiker &amp; Alerji</a></li>
-              <li data-slug="ari-akrep-yilan-sokmalari"><a href="/ari-akrep-yilan-sokmalari">Arı, Akrep & Yılan Sokmaları</a></li>
-              <li data-slug="hayvan-isiriklari-kuduz-tetanoz"><a href="/hayvan-isiriklari-kuduz-tetanoz">Hayvan Isırıkları & Kuduz/Tetanoz</a></li>
-              <li data-slug="yanik-yonetimi"><a href="/yanik-yonetimi">Yanık Yönetimi & Pansuman</a></li>
-            </ul>
-          </li>
-          <li class="nav-group" data-group>
-            <span class="nav-group-label">Gastroenteroloji &amp; Üroloji</span>
-            <ul>
-              <li data-slug="eriskin-akut-gastroenterit"><a href="/eriskin-akut-gastroenterit">Erişkin AGE & Bulantı-Kusma</a></li>
-              <li data-slug="gastrit-reflu-dispepsi"><a href="/gastrit-reflu-dispepsi">Gastrit, Reflü & Dispepsi</a></li>
-              <li data-slug="akut-batin"><a href="/akut-batin">Akut Batın & Peritonit</a></li>
               <li data-slug="ozofagus-varis-kanamasi"><a href="/ozofagus-varis-kanamasi">Özofagus Varis Kanaması</a></li>
-              <li data-slug="h-pylori-eradikasyonu"><a href="/h-pylori-eradikasyonu">H. Pylori Eradikasyonu</a></li>
-              <li data-slug="konstipasyon"><a href="/konstipasyon">Konstipasyon, Gaz & Dispepsi</a></li>
-              <li data-slug="hemoroid"><a href="/hemoroid">Hemoroid (Basur) Yönetimi</a></li>
-              <li data-slug="hemoroid-anal-fissur"><a href="/hemoroid-anal-fissur">Hemoroid & Anal Fissür</a></li>
-              <li data-slug="renal-kolik-glob-vezikale"><a href="/renal-kolik-glob-vezikale">Renal Kolik & Üreter Taşı, Glob Vezikale</a></li>
-              <li data-slug="idrar-yolu-enfeksiyonu"><a href="/idrar-yolu-enfeksiyonu">İdrar Yolu Enfeksiyonu (Sistit & Piyelonefrit)</a></li>
+              <li data-slug="preeklampsi-eklampsi"><a href="/preeklampsi-eklampsi">Preeklampsi &amp; Eklampsi (Gebelikte Nöbet/HT)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-section nav-kritik" data-group>
+        <span class="nav-section-label">Kritik Aciller (Pediatrik)</span>
+        <ul>
+          <li data-slug="anafilaksi"><a href="/anafilaksi">Anafilaksi (Erişkin &amp; Pediatrik)</a></li>
+          <li data-slug="astim-koah-atak"><a href="/astim-koah-atak">Astım &amp; KOAH Atak (Erişkin &amp; Pediatrik)</a></li>
+          <li data-slug="pediatrik-nobet-febril-konvulsiyon"><a href="/pediatrik-nobet-febril-konvulsiyon">Pediatrik Nöbet &amp; Febril Konvülsiyon</a></li>
+          <li data-slug="pediatrik-usye-krup-ates"><a href="/pediatrik-usye-krup-ates">Pediatrik ÜSYE, Krup &amp; Ateş</a></li>
+          <li data-slug="status-epileptikus"><a href="/status-epileptikus">Status Epileptikus (Erişkin &amp; Pediatrik)</a></li>
+        </ul>
+      </li>
+      <li class="nav-section nav-pediatri" data-group>
+        <span class="nav-section-label">Pediatrik Protokoller</span>
+        <ul>
+          <li data-slug="pisik-diaper-dermatit"><a href="/pisik-diaper-dermatit">Diaper Dermatit (Pişik) &amp; Kandida</a></li>
+          <li data-slug="konjonktivit"><a href="/konjonktivit">Konjonktivit &amp; Pediatrik Göz</a></li>
+          <li data-slug="pamukcuk-oral-kandidiyazis"><a href="/pamukcuk-oral-kandidiyazis">Oral Pamukçuk (Kandidiyazis)</a></li>
+          <li data-slug="pediatrik-akut-gastroenterit"><a href="/pediatrik-akut-gastroenterit">Pediatrik AGE (Kusma, İshal &amp; Sıvı)</a></li>
+          <li data-slug="pediatrik-alerji-urtiker"><a href="/pediatrik-alerji-urtiker">Pediatrik Alerji &amp; Atopi</a></li>
+          <li data-slug="pediatrik-dokuntulu-hastaliklar"><a href="/pediatrik-dokuntulu-hastaliklar">Pediatrik Döküntülü Hastalıklar</a></li>
+        </ul>
+      </li>
+      <li class="nav-section nav-eriskin" data-group>
+        <span class="nav-section-label">Erişkin Protokoller</span>
+        <ul>
+          <li class="nav-group" data-group>
+            <span class="nav-group-label">Nöroloji</span>
+            <ul>
+              <li data-slug="bas-agrisi-migren"><a href="/bas-agrisi-migren">Akut Baş Ağrısı &amp; Migren Krizi</a></li>
+              <li data-slug="bell-paralizisi"><a href="/bell-paralizisi">Bell Paralizisi (Fasyal Felç)</a></li>
+              <li data-slug="kafa-ici-basinc-artisi"><a href="/kafa-ici-basinc-artisi">KİBAS (Kafa İçi Basınç Artışı)</a></li>
+              <li data-slug="vertigo-hints"><a href="/vertigo-hints">Periferik Vertigo &amp; HINTS Ayrımı</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
-            <span class="nav-group-label">Kadın Hastalıkları &amp; Gebelik</span>
+            <span class="nav-group-label">Alerji, Sokma, Isırık &amp; Yanık</span>
             <ul>
-              <li data-slug="preeklampsi-eklampsi"><a href="/preeklampsi-eklampsi">Preeklampsi & Eklampsi (Gebelikte Nöbet/HT)</a></li>
+              <li data-slug="ari-akrep-yilan-sokmalari"><a href="/ari-akrep-yilan-sokmalari">Arı, Akrep &amp; Yılan Sokmaları</a></li>
+              <li data-slug="eriskin-urtiker-alerji"><a href="/eriskin-urtiker-alerji">Erişkin Akut Ürtiker &amp; Alerji</a></li>
+              <li data-slug="hayvan-isiriklari-kuduz-tetanoz"><a href="/hayvan-isiriklari-kuduz-tetanoz">Hayvan Isırıkları &amp; Kuduz/Tetanoz</a></li>
+              <li data-slug="yanik-yonetimi"><a href="/yanik-yonetimi">Yanık Yönetimi &amp; Pansuman</a></li>
+            </ul>
+          </li>
+          <li class="nav-group" data-group>
+            <span class="nav-group-label">Gastroenteroloji</span>
+            <ul>
+              <li data-slug="akut-batin"><a href="/akut-batin">Akut Batın &amp; Peritonit</a></li>
+              <li data-slug="eriskin-akut-gastroenterit"><a href="/eriskin-akut-gastroenterit">Erişkin AGE &amp; Bulantı-Kusma</a></li>
+              <li data-slug="gastrit-reflu-dispepsi"><a href="/gastrit-reflu-dispepsi">Gastrit, Reflü &amp; Dispepsi</a></li>
+              <li data-slug="hemoroid-anal-fissur"><a href="/hemoroid-anal-fissur">Hemoroid &amp; Anal Fissür</a></li>
+              <li data-slug="hemoroid"><a href="/hemoroid">Hemoroid (Basur) Yönetimi</a></li>
+              <li data-slug="h-pylori-eradikasyonu"><a href="/h-pylori-eradikasyonu">H. Pylori Eradikasyonu</a></li>
+              <li data-slug="konstipasyon"><a href="/konstipasyon">Konstipasyon, Gaz &amp; Dispepsi</a></li>
+            </ul>
+          </li>
+          <li class="nav-group" data-group>
+            <span class="nav-group-label">Üroloji &amp; Kadın Doğum</span>
+            <ul>
+              <li data-slug="dismenore-pelvik-agri"><a href="/dismenore-pelvik-agri">Dismenore &amp; Pelvik Ağrı</a></li>
               <li data-slug="gebelikte-bulanti-kusma"><a href="/gebelikte-bulanti-kusma">Gebelikte Bulantı-Kusma</a></li>
-              <li data-slug="dismenore-pelvik-agri"><a href="/dismenore-pelvik-agri">Dismenore & Pelvik Ağrı</a></li>
-              <li data-slug="mastit-paronisi"><a href="/mastit-paronisi">Mastit & Paronişi (Dolama)</a></li>
+              <li data-slug="idrar-yolu-enfeksiyonu"><a href="/idrar-yolu-enfeksiyonu">İdrar Yolu Enfeksiyonu (Sistit &amp; Piyelonefrit)</a></li>
+              <li data-slug="mastit-paronisi"><a href="/mastit-paronisi">Mastit &amp; Paronişi (Dolama)</a></li>
+              <li data-slug="renal-kolik-glob-vezikale"><a href="/renal-kolik-glob-vezikale">Renal Kolik &amp; Üreter Taşı, Glob Vezikale</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
             <span class="nav-group-label">Travma, Ağrı &amp; Küçük Cerrahi</span>
             <ul>
-              <li data-slug="kesi-sutur-atel"><a href="/kesi-sutur-atel">Cilt Kesisi, Sütür & Atel</a></li>
               <li data-slug="kucuk-cerrahi-cikik-reduksiyonu"><a href="/kucuk-cerrahi-cikik-reduksiyonu">Acil Küçük Cerrahi &amp; Çıkık Redüksiyonları</a></li>
+              <li data-slug="kesi-sutur-atel"><a href="/kesi-sutur-atel">Cilt Kesisi, Sütür &amp; Atel</a></li>
               <li data-slug="kas-iskelet-agrisi-gut"><a href="/kas-iskelet-agrisi-gut">Kas Spazmı, Miyalji, Artralji, Gut Atak</a></li>
               <li data-slug="siddetli-agri-opioid"><a href="/siddetli-agri-opioid">Şiddetli Ağrı (Opioid Analjezi)</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
-            <span class="nav-group-label">Göz, KBB &amp; Ağız-Diş</span>
+            <span class="nav-group-label">Göz</span>
             <ul>
               <li data-slug="akut-glokom-krizi"><a href="/akut-glokom-krizi">Akut Glokom Krizi</a></li>
-              <li data-slug="goz-travmalari-kaynak-isigi"><a href="/goz-travmalari-kaynak-isigi">Göz Travmaları & Kaynak Işığı (Fotokeratit)</a></li>
-              <li data-slug="konjonktivit"><a href="/konjonktivit">Konjonktivit & Pediatrik Göz</a></li>
-              <li data-slug="arpacik-blefarit"><a href="/arpacik-blefarit">Arpacık (Hordeolum) & Blefarit</a></li>
-              <li data-slug="burun-kanamasi-epistaksis"><a href="/burun-kanamasi-epistaksis">Burun Kanaması (Epistaksis)</a></li>
-              <li data-slug="otitis-eksterna"><a href="/otitis-eksterna">Otitis Eksterna (Dış Kulak İltihabı)</a></li>
+              <li data-slug="arpacik-blefarit"><a href="/arpacik-blefarit">Arpacık (Hordeolum) &amp; Blefarit</a></li>
+              <li data-slug="goz-travmalari-kaynak-isigi"><a href="/goz-travmalari-kaynak-isigi">Göz Travmaları &amp; Kaynak Işığı (Fotokeratit)</a></li>
+              <li data-slug="konjonktivit"><a href="/konjonktivit">Konjonktivit &amp; Pediatrik Göz</a></li>
+            </ul>
+          </li>
+          <li class="nav-group" data-group>
+            <span class="nav-group-label">KBB, Ağız-Diş &amp; Solunum</span>
+            <ul>
               <li data-slug="akut-otitis-media"><a href="/akut-otitis-media">Akut Otitis Media (AOM)</a></li>
+              <li data-slug="burun-kanamasi-epistaksis"><a href="/burun-kanamasi-epistaksis">Burun Kanaması (Epistaksis)</a></li>
+              <li data-slug="dis-agrisi-odontojenik-apse"><a href="/dis-agrisi-odontojenik-apse">Diş Ağrısı &amp; Odontojenik Apse</a></li>
+              <li data-slug="eriskin-usye-bronsit-pnomoni"><a href="/eriskin-usye-bronsit-pnomoni">Erişkin ÜSYE, Bronşit &amp; Pnömoni</a></li>
               <li data-slug="kulakta-yabanci-cisim"><a href="/kulakta-yabanci-cisim">Kulakta Canlı Yabancı Cisim (Böcek)</a></li>
-              <li data-slug="nazal-dekonjestan-rinit"><a href="/nazal-dekonjestan-rinit">Nazal Dekonjestan & Rinit</a></li>
-              <li data-slug="oral-aft-stomatit"><a href="/oral-aft-stomatit">Oral Aft, Stomatit & HSV Ayrımı</a></li>
+              <li data-slug="nazal-dekonjestan-rinit"><a href="/nazal-dekonjestan-rinit">Nazal Dekonjestan &amp; Rinit</a></li>
+              <li data-slug="oral-aft-stomatit"><a href="/oral-aft-stomatit">Oral Aft, Stomatit &amp; HSV Ayrımı</a></li>
               <li data-slug="pamukcuk-oral-kandidiyazis"><a href="/pamukcuk-oral-kandidiyazis">Oral Pamukçuk (Kandidiyazis)</a></li>
-              <li data-slug="dis-agrisi-odontojenik-apse"><a href="/dis-agrisi-odontojenik-apse">Diş Ağrısı & Odontojenik Apse</a></li>
+              <li data-slug="otitis-eksterna"><a href="/otitis-eksterna">Otitis Eksterna (Dış Kulak İltihabı)</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
             <span class="nav-group-label">Dermatoloji</span>
             <ul>
+              <li data-slug="akne-retinoid"><a href="/akne-retinoid">Akne &amp; Retinoid Güvenliği</a></li>
+              <li data-slug="doku-onarimi-hematom"><a href="/doku-onarimi-hematom">Doku Onarımı &amp; Hematom</a></li>
+              <li data-slug="ekzema-dermatit"><a href="/ekzema-dermatit">Ekzema &amp; Dermatit Basamağı</a></li>
               <li data-slug="zona-herpes-zoster"><a href="/zona-herpes-zoster">Herpes Zoster (Zona)</a></li>
-              <li data-slug="mantar-enfeksiyonu-tinea"><a href="/mantar-enfeksiyonu-tinea">Tinea (Mantar) & Saçkıran</a></li>
-              <li data-slug="akne-retinoid"><a href="/akne-retinoid">Akne & Retinoid Güvenliği</a></li>
-              <li data-slug="ekzema-dermatit"><a href="/ekzema-dermatit">Ekzema & Dermatit Basamağı</a></li>
-              <li data-slug="seboreik-dermatit"><a href="/seboreik-dermatit">Seboreik Dermatit</a></li>
-              <li data-slug="sigil-nasir"><a href="/sigil-nasir">Verruka (Siğil) & Nasır Tedavisi</a></li>
-              <li data-slug="uyuz-sac-biti"><a href="/uyuz-sac-biti">Skabies (Uyuz) & Saç Biti</a></li>
               <li data-slug="kil-kurdu"><a href="/kil-kurdu">Kıl Kurdu (Enterobiyazis)</a></li>
-              <li data-slug="doku-onarimi-hematom"><a href="/doku-onarimi-hematom">Doku Onarımı & Hematom</a></li>
+              <li data-slug="seboreik-dermatit"><a href="/seboreik-dermatit">Seboreik Dermatit</a></li>
+              <li data-slug="uyuz-sac-biti"><a href="/uyuz-sac-biti">Skabies (Uyuz) &amp; Saç Biti</a></li>
+              <li data-slug="mantar-enfeksiyonu-tinea"><a href="/mantar-enfeksiyonu-tinea">Tinea (Mantar) &amp; Saçkıran</a></li>
+              <li data-slug="sigil-nasir"><a href="/sigil-nasir">Verruka (Siğil) &amp; Nasır Tedavisi</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
-            <span class="nav-group-label">Psikiyatri &amp; Uyku</span>
+            <span class="nav-group-label">Psikiyatri</span>
             <ul>
               <li data-slug="ajitasyon-alkol"><a href="/ajitasyon-alkol">Akut Ajitasyon &amp; Alkol Yönetimi</a></li>
-              <li data-slug="uykusuzluk-anksiyete"><a href="/uykusuzluk-anksiyete">Uykusuzluk (İnsomnia) & Anksiyete</a></li>
+              <li data-slug="uykusuzluk-anksiyete"><a href="/uykusuzluk-anksiyete">Uykusuzluk (İnsomnia) &amp; Anksiyete</a></li>
             </ul>
           </li>
           <li class="nav-group" data-group>
-            <span class="nav-group-label">Adli Tıp &amp; İlaç Rehberi</span>
+            <span class="nav-group-label">İlaç Rehberi &amp; Adli Tıp</span>
             <ul>
               <li data-slug="acilde-sik-kullanilan-ilaclar"><a href="/acilde-sik-kullanilan-ilaclar">Acilde En Sık Kullanılan İlaçlar</a></li>
-              <li data-slug="adli-muayene-epikriz"><a href="/adli-muayene-epikriz">Adli Muayene & Epikriz Şablonu</a></li>
-              <li data-slug="olu-muayenesi"><a href="/olu-muayenesi">Ölü Muayenesi & Postmortem Bulgular</a></li>
+              <li data-slug="adli-muayene-epikriz"><a href="/adli-muayene-epikriz">Adli Muayene &amp; Epikriz Şablonu</a></li>
+              <li data-slug="olu-muayenesi"><a href="/olu-muayenesi">Ölü Muayenesi &amp; Postmortem Bulgular</a></li>
             </ul>
           </li>
         </ul>
@@ -265,8 +282,9 @@
     </ul>
   </aside>
 
-  <main>
+  <main id="icerik">
     <nav class="breadcrumb" aria-label="Sayfa yolu"><a href="/">Ana sayfa</a> › Akut Akciğer Ödemi (Kalp Yetersizliği)</nav>
+    <p class="print-only print-source">Güncel sürüm: doctoremin.com/akut-akciger-odemi · Son düzenleme: 05.11.2026</p>
     <div id="akut-akciger-odemi" class="card">
       <div class="card-head">
         <div>
@@ -276,7 +294,7 @@
         <button class="btn-print" onclick="window.print()">Yazdır / PDF</button>
       </div>
       <div class="box-emin">
-        <h3>EMİN'SEN: (AGRESİF RESÜSİTASYON & FARMAKOLOJİ)</h3>
+        <h2>EMİN'SEN: (AGRESİF RESÜSİTASYON & FARMAKOLOJİ)</h2>
         <ol>
           <li><strong>Pozisyon & Solunum Desteği:</strong> Hastayı <strong>dik oturt (bacaklar aşağı sarkıtılabilir)</strong>. Yüksek akım rezervuarlı O₂ bağla; yoruluyorsa hemen <strong>CPAP/BiPAP (NIV)</strong> desteğine geç.</li>
           <li>
@@ -291,7 +309,7 @@
         </ol>
       </div>
       <div class="box-degilsen">
-        <h3>EMİN DEĞİLSEN: KARDİYOJENİK ŞOK AYRIMI & SEVK</h3>
+        <h2>EMİN DEĞİLSEN: KARDİYOJENİK ŞOK AYRIMI & SEVK</h2>
         <ul>
           <li><strong>Sistolik TA &lt; 90-100 mmHg İse (Kardiyojenik Şok):</strong> Nitrat ve yüksek doz diüretik KONTRENDİKEDİR! Tansiyonu toparlamak için inotrop/vazopressör (Noradrenalin / Dobutamin) başlanmalıdır.</li>
           <li><strong>KÖTÜLEŞİRSE: 112 KKM & Koroner Yoğun Bakım:</strong> Akut akciğer ödemi primer medikal tedavi sonrası gecikmeksizin Koroner YBÜ olan 3. Basamak merkeze Kırmızı Kod ile sevk edilir.</li>
@@ -301,8 +319,23 @@
 
    <!-- 3. AKUT BAŞ AĞRISI & MİGREN KARTI -->
 
+    <nav class="related" aria-label="İlgili protokoller">
+      <h2 class="related-title">İlgili protokoller</h2>
+      <ul class="related-list">
+        <li><a href="/pulmoner-emboli">Akut Pulmoner Emboli (PTE)</a></li>
+        <li><a href="/angina-pektoris">Angina Pektoris (Göğüs Ağrısı)</a></li>
+        <li><a href="/aort-diseksiyonu">Aort Diseksiyonu</a></li>
+        <li><a href="/atriyal-fibrilasyon">Atriyal Fibrilasyon (AF / RVR)</a></li>
+        <li><a href="/hipertansif-kriz">Hipertansif Kriz (Emergency vs. Urgency)</a></li>
+        <li><a href="/miyokard-enfarktusu">Miyokard Enfarktüsü (MI)</a></li>
+        <li><a href="/bradikardi-av-blok">Semptomatik Bradikardi &amp; AV Blok</a></li>
+        <li><a href="/supraventrikuler-tasikardi">Supraventriküler Taşikardi (SVT)</a></li>
+        <li><a href="/ventrikuler-tasikardi">Ventriküler Taşikardi (Nabızlı VT)</a></li>
+      </ul>
+    </nav>
+
     <footer class="disclaimer-box">
-      <strong>Yasal Uyarı & Sorumluluk Reddi:</strong><br>
+      <strong>Yasal Uyarı &amp; Sorumluluk Reddi:</strong><br>
          Bu sitede yer alan protokoller, dozlar ve klinik algoritmalar yalnızca hekimler ve sağlık çalışanları için mesleki hafıza desteği amacıyla derlenmiştir. Hekim-hasta ilişkisi doğurmaz; resmi tanı/tedavi kılavuzu, mevzuat veya protokol niteliği taşımaz. Sitede yer verilen ticari isimler (müstahzarlar) yalnızca acil pratik hatırlatmayı kolaylaştırmak amacıyla emsal olarak paylaşılmış olup hiçbir ilaç firmasıyla reklam, sponsorluk veya maddi çıkar bağı bulunmamaktadır; bağlayıcı olan her zaman etken maddedir. Tıbbi kararlar, dozaj, endikasyon, kontrendikasyon ve nihai uygulama sorumluluğu bütünüyle hastayı bizzat takip ve muayene eden hekimin mesleki takdirindedir. Sitede derlenen bilgilerin kullanımından doğabilecek doğrudan veya dolaylı hiçbir komplikasyon, yan etki, maddi/manevi zarar veya malpraktis iddiasından site yöneticisi ve yazarları hukuki ya da cezai olarak sorumlu tutulamaz.
     </footer>
     <p class="site-meta"><button type="button" class="link-btn" onclick="openOneriler()">İletişim</button> · Son düzenleme: 05.11.2026</p>
@@ -403,6 +436,6 @@
 
   </div> <!-- onerilerModal iç kart bitişi -->
 </div> <!-- onerilerModal BİTİŞİ -->
-<script src="/site.js"></script>
+<script src="/site.js?v=afb51ae6"></script>
 </body>
 </html>

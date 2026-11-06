@@ -1,3 +1,5 @@
+/* doctoremin.com — ortak betik (tüm sayfalar) */
+
 function toggleModal(show) {
   var m = document.getElementById('cvModal');
   if (m) m.style.display = show ? 'flex' : 'none';
@@ -8,12 +10,37 @@ function openOneriler() {
   if (m) m.style.display = 'flex';
 }
 
+/* Hakkımda ve Öneriler pencereleri: Esc tuşu veya dış alana dokunma ile kapanır.
+   Yasal uyarı penceresi yalnızca "Kabul Ediyorum" ile kapanır. */
+(function () {
+  ['cvModal', 'onerilerModal'].forEach(function (id) {
+    var m = document.getElementById(id);
+    if (!m) return;
+    m.addEventListener('click', function (ev) {
+      if (ev.target === m) m.style.display = 'none';
+    });
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key !== 'Escape') return;
+    ['cvModal', 'onerilerModal'].forEach(function (id) {
+      var m = document.getElementById(id);
+      if (m) m.style.display = 'none';
+    });
+  });
+})();
+
+/* Türkçe karakterden bağımsız arama: "olu" -> "Ölü", "kibas" -> "KİBAS" */
+var TR_HARF = { 'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u', 'â': 'a', 'î': 'i', 'û': 'u' };
+function normalize(s) {
+  return (s || '').toLocaleLowerCase('tr').replace(/[çğıöşüâîû]/g, function (c) { return TR_HARF[c]; });
+}
+
 function highlightText(element, query) {
   if (!element) return;
 
-  // 1. Önceki tüm sarı vurguları temizle
+  // 1. Önceki vurguları temizle
   var marks = element.querySelectorAll('mark.search-highlight');
-  marks.forEach(function(m) {
+  marks.forEach(function (m) {
     var parent = m.parentNode;
     if (parent) {
       parent.replaceChild(document.createTextNode(m.textContent), m);
@@ -27,52 +54,34 @@ function highlightText(element, query) {
   var walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
   var textNodes = [];
   while (walker.nextNode()) {
-    if (walker.currentNode.nodeValue.trim().length > 0) {
-      textNodes.push(walker.currentNode);
-    }
+    if (walker.currentNode.nodeValue.trim().length > 0) textNodes.push(walker.currentNode);
   }
 
-  // 3. Eşleşen kelimeleri sarı mark içine al
-  textNodes.forEach(function(node) {
+  // 3. Eşleşmeleri işaretle
+  var first = null;
+  textNodes.forEach(function (node) {
     var text = node.nodeValue;
-    var lower = text.toLocaleLowerCase('tr');
-    var matchPos = lower.indexOf(query);
-
-    if (matchPos !== -1) {
-      var frag = document.createDocumentFragment();
-      var curText = text;
-      var curLower = lower;
-
-      while (true) {
-        var idx = curLower.indexOf(query);
-        if (idx === -1) {
-          frag.appendChild(document.createTextNode(curText));
-          break;
-        }
-
-        if (idx > 0) {
-          frag.appendChild(document.createTextNode(curText.substring(0, idx)));
-        }
-
-        var mark = document.createElement('mark');
-        mark.className = 'search-highlight';
-        mark.style.backgroundColor = '#ffeb3b';
-        mark.style.color = '#000';
-        mark.style.fontWeight = 'bold';
-        mark.style.padding = '0 2px';
-        mark.style.borderRadius = '2px';
-        mark.textContent = curText.substring(idx, idx + query.length);
-        frag.appendChild(mark);
-
-        curText = curText.substring(idx + query.length);
-        curLower = curLower.substring(idx + query.length);
+    var low = normalize(text);
+    if (low.length !== text.length || low.indexOf(query) === -1) return;
+    var frag = document.createDocumentFragment();
+    var pos = 0;
+    while (true) {
+      var idx = low.indexOf(query, pos);
+      if (idx === -1) {
+        frag.appendChild(document.createTextNode(text.substring(pos)));
+        break;
       }
-
-      if (node.parentNode) {
-        node.parentNode.replaceChild(frag, node);
-      }
+      if (idx > pos) frag.appendChild(document.createTextNode(text.substring(pos, idx)));
+      var mark = document.createElement('mark');
+      mark.className = 'search-highlight';
+      mark.textContent = text.substring(idx, idx + query.length);
+      frag.appendChild(mark);
+      if (!first) first = mark;
+      pos = idx + query.length;
     }
+    if (node.parentNode) node.parentNode.replaceChild(frag, node);
   });
+  return first;
 }
 
 var eminIndex = null;
@@ -85,7 +94,7 @@ function loadSearchIndex(done) {
     .then(function (r) { return r.json(); })
     .then(function (data) {
       eminIndex = {};
-      data.forEach(function (it) { eminIndex[it.s] = (it.t + ' ' + it.x).toLocaleLowerCase('tr'); });
+      data.forEach(function (it) { eminIndex[it.s] = normalize(it.t + ' ' + it.x); });
       eminIndexLoading = false;
       done();
     })
@@ -99,16 +108,17 @@ function filterMenu() {
   try {
     var inputEl = document.getElementById('sidebarSearch');
     if (!inputEl) return;
-    var q = inputEl.value.toLocaleLowerCase('tr').trim();
+    var q = normalize(inputEl.value).trim();
 
     try {
       if (q) sessionStorage.setItem('eminSearchQ', inputEl.value);
       else sessionStorage.removeItem('eminSearchQ');
     } catch (e) {}
 
+    var isHome = document.body.classList.contains('page-home');
     var aside = document.querySelector('aside');
     var btn = document.querySelector('.list-toggle');
-    if (aside && q) {
+    if (aside && q && !isHome) {
       aside.classList.add('list-open');
       if (btn) btn.setAttribute('aria-expanded', 'true');
     }
@@ -120,9 +130,9 @@ function filterMenu() {
 
     document.querySelectorAll('[data-slug]').forEach(function (el) {
       var slug = el.getAttribute('data-slug');
-      var titleText = (el.textContent || '').toLocaleLowerCase('tr');
+      var titleText = normalize(el.textContent);
       var cardText = (eminIndex && eminIndex[slug]) ? eminIndex[slug] : '';
-      var isMatch = (q === '') || titleText.includes(q) || cardText.includes(q);
+      var isMatch = (q === '') || titleText.indexOf(q) !== -1 || cardText.indexOf(q) !== -1;
       el.style.display = isMatch ? '' : 'none';
     });
 
@@ -132,6 +142,14 @@ function filterMenu() {
       });
       g.style.display = any ? '' : 'none';
     });
+
+    var empty = document.getElementById('aramaSonucYok');
+    if (empty) {
+      var visible = Array.prototype.some.call(document.querySelectorAll('main [data-slug]'), function (el) {
+        return el.style.display !== 'none';
+      });
+      empty.hidden = visible || (q !== '' && !eminIndex);
+    }
   } catch (err) {
     console.error('Arama hatası:', err);
   }

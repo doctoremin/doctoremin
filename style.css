@@ -155,22 +155,22 @@ main { flex: 1; padding: 32px 40px; width: 100%; max-width: 100%; min-width: 0; 
 .btn-print:hover { background: #eef2f7; }
 
 .box-emin {
-  background: var(--red-soft);
-  border-left: 4px solid var(--red-border);
-  border-radius: 0 8px 8px 0;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-.box-emin h2, .box-emin h3 { font-size: 1.02rem; font-weight: 800; color: var(--red-text); margin-bottom: 8px; }
-
-.box-degilsen {
   background: var(--green-soft);
   border-left: 4px solid var(--green-border);
   border-radius: 0 8px 8px 0;
   padding: 16px;
   margin-bottom: 16px;
 }
-.box-degilsen h2, .box-degilsen h3 { font-size: 1.02rem; font-weight: 800; color: var(--green-text); margin-bottom: 8px; }
+.box-emin h2, .box-emin h3 { font-size: 1.02rem; font-weight: 800; color: var(--green-text); margin-bottom: 8px; }
+
+.box-degilsen {
+  background: var(--red-soft);
+  border-left: 4px solid var(--red-border);
+  border-radius: 0 8px 8px 0;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.box-degilsen h2, .box-degilsen h3 { font-size: 1.02rem; font-weight: 800; color: var(--red-text); margin-bottom: 8px; }
 
 .subhead { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin: 12px 0 4px 0; letter-spacing: 0.01em; }
 ol, ul { padding-left: 18px; font-size: 0.9rem; }
@@ -252,7 +252,8 @@ mark.search-highlight { background: #fde047; color: #000; font-weight: 700; padd
   color: var(--accent-ink);
 }
 .home-kritik .home-section-title { font-size: 1.4rem; color: var(--red-text); background: var(--red-soft); border-left: 6px solid #dc2626; border-radius: 0 8px 8px 0; padding: 10px 14px; }
-.home-pediatri .home-section-title { color: var(--ped); border-left-color: var(--ped); }
+.home-pediatri .home-section-title { font-size: 1.4rem; color: var(--ped); background: var(--ped-soft); border-left: 6px solid var(--ped); border-radius: 0 8px 8px 0; padding: 10px 14px; }
+.home-eriskin .home-section-title { font-size: 1.4rem; color: var(--accent-ink); background: var(--accent-soft); border-left: 6px solid var(--accent); border-radius: 0 8px 8px 0; padding: 10px 14px; }
 .home-group { margin-bottom: 4px; }
 .home-section { counter-reset: grp; }
 .home-group-title { font-size: 1rem; font-weight: 800; color: var(--text); margin: 18px 0 8px 2px; padding-bottom: 4px; border-bottom: 1px solid var(--border-strong); }
